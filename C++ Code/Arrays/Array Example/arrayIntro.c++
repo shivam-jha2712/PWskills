@@ -33,7 +33,7 @@ int main() // MAIN DEFINATION
     // 3. Using While Loop
     cout << "Printing the array using While loop " << endl;
     int j = 0;
-    while (length--)
+    while (j < length)
     {
         cout << array[j] << endl;
         j++;
