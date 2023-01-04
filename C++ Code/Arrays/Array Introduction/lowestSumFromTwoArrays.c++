@@ -13,13 +13,27 @@ int main() // MAIN DEFINATION
     for (int i = 0; i < n; i++)
     {
         cin >> arr1[i];
-        sort(arr1, arr1 + n); // Using Sort function of STL
     }
     for (int j = 0; j < n; j++)
     {
         cin >> arr2[j];
-        sort(arr2, arr2 + n); // Using Sort function of STL
     }
-    cout << arr1[0] + arr2[0] << endl;
+    int min1 = arr1[0];
+    for (int i = 0; i < n; i++)
+    {
+        if (arr1[i] < min1)
+        {
+            min1 = arr1[i];
+        }
+    }
+    int min2 = arr2[0];
+    for (int j = 0; j < n; j++)
+    {
+        if (arr2[j] < min2)
+        {
+            min2 = arr2[j];
+        }
+    }
+    cout << min1 + min2 << endl;
     return 0;
 }
