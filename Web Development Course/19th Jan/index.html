@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>PWSKILLS</h1>
+    <h2>hello world</h2>
+    <p>Lorem10</p>
+
+    <!-- Getting HTML Entities -->
+    <h1>5 &gt; 3</h1>
+    <h1>5 &copy; 3</h1>
+    <!-- This is used to generate the HTML entities in other words HTML entities are the ones which store the reserved keywords for display in the browser. This contains a lot of HTML entities like & % $ > < "" and many more-->
+
+    <h2>Sentence without non breaking Space</h2>
+    <h2>Sentence with non &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;breaking Space</h2>
+    <!-- &nbsp; is  the HTML entitiy that is required to print extra spaces  -->
+
+    <h2>&#61;</h2>
+    <!-- You vvan even print HTML entities using numbers in the same manner as previous so the thing must be formatted with a # just after & and before the number in order to print the entities correctly Also we must note the these numbers start from 61 and go on-->
+
+    <p class="ram">Ram Class</p>
+    <!-- Used p.ram to add a class of name Ram -->
+    <p id="ram">Ram Id</p>
+    <!-- Used p#ram to add an id of the name Ram -->
+
+    <!-- Now to add Custom attributes we need to used square brackets img[src='ram.jpg']-->
+    <img src="ram.jpg" alt="ram">
+
+    <!-- How to get with Parent Child Grouping -->
+    <!-- To work with Parent Child Grouping div.ram>p#sita>li*5 -->
+    <div class="ram">
+        <p id="sita">
+            <li>Ram</li>
+            <li>Lakshman</li>
+            <li>Bharat</li>
+            <li>Shatrughn</li>
+        </p>
+    </div>
+
+    <!-- To get Sibling or Brotherhood-Sibling Grouping  -->
+    <!-- We use div>p+p+p -->
+    <div class="Ram">
+        <p>Ram Lorem, ipsum dolor.</p>
+        <p>Ram Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+        <p>Ram Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, laboriosam?</p>
+    </div>
+
+    <!-- How to do Grouping -->
+    <!-- This is used to group data within it eg: div>(nav>li*5)+section -->
+    <div>
+        <nav>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </nav>
+        <section></section>
+    </div>
+
+
+
+</body>
+
+</html>
