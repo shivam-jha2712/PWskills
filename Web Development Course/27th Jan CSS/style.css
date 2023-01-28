@@ -51,3 +51,21 @@ p::selection{
     /* Conic Radial Gradients */
     /* background-image: conic-gradient( red 27deg,yellow, blue, green );  */
 }
+
+/* Transition */
+
+.trans{
+    height: 100px;
+    width: 100px;
+    background-color: black;
+    transition: width  2s, height 2s, background-color 1.5s;
+    /* transition-timing-function: ease-in-out; */
+    /* transition-delay: 3s; */
+    /* In transition we mention the property followed by the transition duration*/
+}
+
+.trans:hover{
+    width: 200px;
+    height: 180px;
+    background-color: blueviolet;
+}
