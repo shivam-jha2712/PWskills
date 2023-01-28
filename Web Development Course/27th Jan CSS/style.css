@@ -39,7 +39,7 @@ p::selection{
 .grad{
     height: 500px;
     /*Linear Gradient*/
-    /* background-image: linear-gradient(to left, red,yellow);  */
+    background-image: linear-gradient(to left, red,yellow); 
 
     /* The direction such as to left is used to tell us from where the gradient needs to be started from */
     /* In order to create the gradient effect we use 
@@ -49,5 +49,5 @@ p::selection{
     /* background-image: radial-gradient( circle,red,yellow, blue); */
     
     /* Conic Radial Gradients */
-    background-image: conic-gradient( red 27deg,yellow, blue, green ); */
+    /* background-image: conic-gradient( red 27deg,yellow, blue, green );  */
 }
