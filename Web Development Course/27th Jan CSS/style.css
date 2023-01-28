@@ -4,3 +4,33 @@ p:hover{
     color: white;
 }
 /*  Also it is important to remeber that classes and Ids can be even used as selectors in case of selectors */
+
+input:focus{
+    color: red;
+    background-color : black;
+    font-size:  22px;
+}
+
+a:first-child{
+    color: black;
+}
+
+a:nth-child(odd)
+{
+    background-color : yellow;
+}
+
+p::after{
+    content: "Shivam";
+    color: rgb(196, 31, 31);
+}
+
+p::before{
+    content: "Shivam";
+    color: rgb(209, 35, 35);
+}
+
+p::selection{
+    background-color: black;
+    color: yellow;
+}
