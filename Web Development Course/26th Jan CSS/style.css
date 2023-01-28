@@ -36,11 +36,32 @@ a{
 }
 
 /* Display In CSS */
-p .description{
-    display: inline;
+ .description{
+    display: inline-block;
+    width: 100%;
+    color: red;
 }
 
-span .description{
-    display: block
+.description2{
+    display: block;
+    color: #1d961f;
 }
 /*  This is to note that in general the view of elements in the HTML document is either INLINE or is BLOCK LEVEL ELEMENT */
+
+/* Height and Width formation in an element */
+
+.width{
+    /* min-width: 150px; */
+    width: 150px;
+    border: 2px solid yellow;
+    background-color: grey;
+    color: black;
+}
+
+.height{
+    height: 150px;
+    /* min-height: auto; */
+    border: 2px solid yellow;
+    background-color: grey;
+    color: black;
+}
