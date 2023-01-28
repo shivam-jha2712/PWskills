@@ -36,5 +36,11 @@ a{
 }
 
 /* Display In CSS */
+p .description{
+    display: inline;
+}
 
+span .description{
+    display: block
+}
 /*  This is to note that in general the view of elements in the HTML document is either INLINE or is BLOCK LEVEL ELEMENT */
