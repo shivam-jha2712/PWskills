@@ -1,0 +1,37 @@
+/* Universal Selectors */
+*{
+    margin: 0;
+    padding: 0;
+    /* background-color: aqua; */
+}
+
+/* Element Selectors */
+h1{
+    background-color: #808080
+}
+p{
+    color: rgb(58, 171, 58);
+}
+
+/* Class Selectors */
+.para{
+    color: goldenrod;
+    font-size: 24px;
+}
+
+
+/* Id Selector */
+#para3{
+    color: whitesmoke;
+    background-color:black;
+}
+
+/* Desendants Selectors */
+main p{
+    color: red;
+}
+
+/* Child Selector */
+h1 > p {
+    color: blue;
+}
