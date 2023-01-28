@@ -1,0 +1,12 @@
+body{
+    border: 3px solid black;
+}
+.padding{
+    padding: 100px 20px;
+    border: 2px solid black;
+}
+.margin{
+    border: 2px solid black;
+    width: 100%;
+    margin: auto;
+}
