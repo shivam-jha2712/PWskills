@@ -35,3 +35,19 @@ main p{
 h1 > p {
     color: blue;
 }
+
+/* Adjascent Sibling Selector */
+section + p{
+    color: #808080;
+}
+
+/* General Sibling Selector */
+section ~ p{
+    color: royalblue;
+}
+
+/* Attribute Selector */
+[target="_blank"] {
+    color: brown;
+    text-decoration: none;
+}
