@@ -1,0 +1,6 @@
+/*  In order to use the pseudo classes we first need to mention the selector followed by the ":" and then the pseudo class*/
+p:hover{
+    background-color : black;
+    color: white;
+}
+/*  Also it is important to remeber that classes and Ids can be even used as selectors in case of selectors */
