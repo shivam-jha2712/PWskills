@@ -11,8 +11,12 @@ div{
     /* This iteration count is responsible for the number of times animation will occur */
     animation-direction: alternate-reverse;
     /* Above animation direction is used for the direction in which animation functions */
-    animation-fill-mode: forwards;
+    /* animation-fill-mode: forwards; */
+    /* animation-fill-mode: backwards; */
+    animation-fill-mode: both;
     /* animation-fill-mode is responsible for telling us what would be last state of the div after the exectuion of complete animation And if we don't refresh the page the animation will stay in the same manner in which it last stopped*/
+
+    /*IMPORTANT-- There even exists a shorthand for the following above data and that is "animation:" That has all the properties */
 }
 
 #ease{
