@@ -1,0 +1,28 @@
+body{
+    background-color: red;
+}
+
+div{
+    font-size: x-large;
+    text-align: center;
+}
+
+/* Psedo elements are  ::after, ::before , ::content, ::backdrop etc */
+/* Psudo elements carry content for all the places the element for which it is determined*/
+div::after{
+    content: "Welcome to the demo"
+}
+
+/* No we are writing certain media queries */
+@media (min-width: 900px) {
+
+    /* If viewport is at least 900px then we would apply this style
+    else the above style would be applied */
+    body {
+        background-color: aquamarine;
+    }
+
+    div::after{
+        content: "Chamtkaar ko namaskaar";
+    }
+}
