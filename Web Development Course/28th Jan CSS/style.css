@@ -39,7 +39,7 @@ div{
         content: "Thane ka Tiger - Tablet wala";
     }
 }
-@media (min-width: 900px) {
+@media (min-width: 992px) {
 
     /* If viewport is at least 900px then we would apply this style
     else the above style would be applied */
