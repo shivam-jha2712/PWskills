@@ -20,6 +20,8 @@ void sortedSquaredArray(vector<int> v)
         }
     }
 
+    reverse(ans.begin(), ans.end());
+
      for(int i=0; i<v.size(); i++)
  {
     cout << ans[i] << " ";
