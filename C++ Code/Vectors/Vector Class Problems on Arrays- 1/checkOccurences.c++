@@ -2,9 +2,6 @@
 using namespace std;
 int main()
 {
- ios_base::sync_with_stdio(false); // For fast I/O
- cin.tie(0);
- cout.tie(0);
  cout << "Enter the size of the array: ";
  int n;
  cin >> n;
@@ -22,7 +19,7 @@ int main()
 
 
  const int N = 1e5 + 10; // This is basically defining a constant N which is of size 10^5
- vector <int> freq(N,0); 
+ vector<int> freq(N,0); 
  //We have intialized a vector that can contain N elements and it starts from 0
  for(int i =0; i<n; i++)
  {
