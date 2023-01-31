@@ -12,6 +12,7 @@ int main()
      k = k%n; // Because k can be greater than n;
 
      int ansarray[5];
+   //Here we are using an extra array in order to rotate the given array thus, when we need to do it without using an extra array we need to follow the vector approach
      int j =0;
      // Inserting last k elements in answer array
      for(int i =n-k; i<n; i++)
