@@ -1,0 +1,71 @@
+/*  In order to use the pseudo classes we first need to mention the selector followed by the ":" and then the pseudo class*/
+p:hover{
+    background-color : black;
+    color: white;
+}
+/*  Also it is important to remeber that classes and Ids can be even used as selectors in case of selectors */
+
+input:focus{
+    color: red;
+    background-color : black;
+    font-size:  22px;
+}
+
+a:first-child{
+    color: black;
+}
+
+a:nth-child(odd)
+{
+    background-color : yellow;
+}
+
+p::after{
+    content: "Shivam";
+    color: rgb(196, 31, 31);
+}
+
+p::before{
+    content: "Shivam";
+    color: rgb(209, 35, 35);
+}
+
+p::selection{
+    background-color: black;
+    color: yellow;
+}
+
+/* Gradient */
+.grad{
+    height: 500px;
+    /*Linear Gradient*/
+    background-image: linear-gradient(to left, red,yellow); 
+
+    /* The direction such as to left is used to tell us from where the gradient needs to be started from */
+    /* In order to create the gradient effect we use 
+    background-image: linear-gradient */
+
+    /* Radial Gradient */
+    /* background-image: radial-gradient( circle,red,yellow, blue); */
+    
+    /* Conic Radial Gradients */
+    /* background-image: conic-gradient( red 27deg,yellow, blue, green );  */
+}
+
+/* Transition */
+
+.trans{
+    height: 100px;
+    width: 100px;
+    background-color: black;
+    transition: width  2s, height 2s, background-color 1.5s;
+    /* transition-timing-function: ease-in-out; */
+    /* transition-delay: 3s; */
+    /* In transition we mention the property followed by the transition duration*/
+}
+
+.trans:hover{
+    width: 200px;
+    height: 180px;
+    background-color: blueviolet;
+}

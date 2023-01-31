@@ -1,0 +1,49 @@
+.suii{
+    height: 250px;
+    width: 250px;
+    border-radius: 25px;
+    border: 3px solid black;
+    overflow: hidden;
+}
+
+.one{
+    height: 100px;
+    width: 100px;
+    background-color: rgb(27, 26, 26);
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+.two{
+    height: 100px;
+    width: 100px;
+    background-color: rgb(88, 88, 54);
+    position: relative;
+    top: 55px;
+    left: 175px;
+}
+
+.box{
+    height: 100px;
+    width: 100px;
+}
+
+.box1{
+    background-color: red;
+}
+
+.box2{
+    background-color: yellow;
+    /*
+     position: fixed;
+    bottom: 0;
+    right: 10px;
+    */
+} 
+
+.box3{
+    background-color: blue;
+    position: sticky;
+    top: 0;
+}
