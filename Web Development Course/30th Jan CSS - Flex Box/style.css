@@ -1,0 +1,47 @@
+/* Flex Container Property */
+
+.cont{
+    display: flex;
+    /* By default flex assigns horizontal view for the elements */
+    height: 275px;
+    border: 1px solid black;
+    /* flex-direction: column; */
+    /* flex-wrap: wrap; */
+    /* flex-flow: ; */
+    /* Justify content follows on the main axis - aka X- Axis, Whereas the align-items works with the Y - Axis*/
+
+    /* justify-content: center; */
+    /* align-items: center; */
+
+    /* gap: 100px; */
+}
+
+/* If you have used strech then the height and width over writes the stretch property in general */
+.box{
+    height: 100px;
+    width: 100px;
+}
+
+.box1{
+    background-color: red;
+    /* order: 100; */
+    /* flex-grow: 2; */
+    /* flex-shrink: 2 */
+}
+
+.box2{
+    background-color: green;
+    /* order: 10; */
+    /* flex-grow: 3; */
+    /* flex-shrink: 2 */
+    align-self: center;
+}
+
+.box3{
+    background-color: blue;
+    /* order: 1; */
+    /* flex-grow: 2; */
+    /* flex-shrink: 2; */
+}
+
+/* There is another property of flex-items that is flex -basis and it os responsible to identify how much space needs to be provided for each elementwhen it is rendered*/
