@@ -1,6 +1,20 @@
 //The Given code is done by creating a new array and the data is in the new array of the summation stored
 #include<bits/stdc++.h>
 using namespace std;
+
+void largestAltitude(vector<int>& gain) {
+        int ans=0, sum=0;
+        for (int i=0; i<gain.size(); i++){
+            sum+=gain[i];
+            ans= max(sum,ans);
+        }
+
+    cout << ans << endl;
+
+        return ;
+}
+
+
 int main()
 {
  ios_base::sync_with_stdio(false); // For fast I/O
@@ -8,34 +22,16 @@ int main()
  cout.tie(0);
  
  int n;
- cin >>n;
-int array[n];
-int sum = 0;
- for(int  i = 0; i<n; i++)
+ cin >> n;
+
+ vector<int> v;
+ for(int i =0; i< n; i++)
  {
-    cin >> array[i];
+    int ele;
+    cin >> ele;
+    v.push_back(ele);
  }
-
-  for(int  i = 1; i <= n; i++)
- {
-     array[i] = array[i] + array[i-1];
- }
-
- for(int  i = 1; i<=n; i++)
- {
-    cout <<  array[i] << " ";
- }
- cout << endl;
-
-if(*max_element(array, array + n)>0)
-{
-    cout << *max_element(array, array + n) << endl;
-}
-
-else
-{
-    cout << "0" << endl;
-}
-
+ 
+ largestAltitude(v);
     return 0;
 }
