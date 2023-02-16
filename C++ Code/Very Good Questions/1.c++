@@ -7,12 +7,29 @@ int main() // MAIN DEFINATION
     ios_base::sync_with_stdio(false);  //For fast I/O
     cin.tie(0);
     cout.tie(0);
-    int t;
-    cout << "Enter a Number" << endl;
-    cin >> t;
-    while(t--)
+    int n;
+    cin >> n;
+    int array[n];
+    for(int i =0; i<n; i++)
     {
-        cout << t << endl;
+        cin >> array[i];
     }
+
+    sort(array, array + n);
+    int ans = 0;
+    for(int i =0; i<n; i++)
+    {
+        for(int j =i+1; j<n; j++)
+        {
+            if(array[i]+array[j] == array[n-1])
+            {
+               ans = array[n-1];
+            }
+            else{
+                ans = 0;
+            }
+        }
+    }
+    cout << ans << endl;
     return 0;
 }
