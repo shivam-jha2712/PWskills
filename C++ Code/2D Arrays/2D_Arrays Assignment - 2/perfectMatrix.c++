@@ -1,6 +1,6 @@
-#include <iostream>
-#include <vector>
+#include <bits/stdc++.h>
 using namespace std;
+
 bool check(vector<vector<int>> &mat)
 {
     int r = mat.size();
