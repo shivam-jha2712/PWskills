@@ -1,6 +1,13 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+// 3 4
+// 0 1 1 1 
+// 0 0 0 1
+// 0 0 0 1
+
+// maxOnesRow = 0
+
 // Since all the work is done on a vector thus we need to put an "&" before Vector in order to 
 int maximumOnesRow(vector<vector<int>> &V)
 {
