@@ -1,0 +1,21 @@
+// Write this code in the cpp.json file
+{
+    "cpp snippets":
+    {
+        "prefix" : "c++ boilerplate code",
+                   "body" : [
+                       "#include<bits/stdc++.h>",
+                       "using namespace std;",
+                       "int main()",
+                       "{",
+                       "ios_base::sync_with_stdio(false); // For fast I/O",
+                       "cin.tie(0);",
+                       "cout.tie(0);",
+                       "$1",
+                       "    return 0;",
+                       "}"
+  
+                   ],
+                            "description" : "to produce the main snippet for cpp"
+    }
+}
