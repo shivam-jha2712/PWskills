@@ -1,80 +1,50 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
-
-vector<vector<int>> createSpiralMatrix(int n)
+vector<vector<int>> spiralMatrix(int n)
 {
-    vector<vector<int >> matrix (n, vector<int> (n));
-
-    int left =0; 
-    int right = n -1;
-    int top = 0;
-    int bottom = n - 1;
-
-    int direction = 0;
-    int value = 1;
-
-    while(left <=right && top <= bottom)
+    vector<vector<int>> a(n, vector<int>(n, -1));
+    int val = 1;
+    int left = 0, right = n - 1;
+    int up = 0, down = n - 1;
+    n = n * n;
+    n++;
+    while (val < n)
     {
-        if(direction == 0)
+        for (int j = left; j <= right && val < n; j++)
         {
-            for(int i = left; i <=right; i++)
-            {
-                matrix[top][i] = value++;
-            }
-            top++;
+            a[up][j] = val++;
         }
-        else if (direction == 1){
-            for(int j = top; j <= bottom; j++)
-            {
-                matrix[j][right] = value++;
-            }
-            right--;
-        }
-
-        else if(direction == 2)
+        for (int i = up + 1; i <= down - 1 && val < n; i++)
         {
-            for(int i = right; i>= left; i--)
-            {
-                matrix[bottom][i] = value++;
-            }
-            bottom--;
+            a[i][right] = val++;
         }
-        else{
-            for(int j=bottom; j>=top; j--)
-            {
-                matrix[j][left] = value++;
-            }
-            left--;
+        for (int j = right; j >= left && val < n; j--)
+        {
+            a[down][j] = val++;
         }
-
-        direction = (direction + 1)%4;
-
+        for (int i = down - 1; i >= up + 1 && val < n; i--)
+        {
+            a[i][left] = val++;
+        }
+        left++, right--, up++, down--;
     }
 
-    return matrix;
-
+    return a;
 }
 
 int main()
 {
-ios_base::sync_with_stdio(false); // For fast I/O
-cin.tie(0);
-cout.tie(0);
-
-int n;
-cin >> n;
-
-vector<vector<int>> matrix(n, vector<int>(n));
-
-matrix = createSpiralMatrix(n);
-for(int i = 0; i< n; i++)
-{
-    for(int j =0; j< n; j++)
+    int n;
+    cin >> n;
+    std::vector<std::vector<int>> a(n, std::vector<int>(n, 0));
+    a = spiralMatrix(n);
+    for (int i = 0; i < n; i++)
     {
-            cout <<  matrix[i][j] << " ";
+        for (int j = 0; j < n; j++)
+        {
+            cout << a[i][j] << ' ';
+        }
+        cout << '\n';
     }
-    cout << endl;
-}
-
-    return 0;
+    cout << '\n';
 }
