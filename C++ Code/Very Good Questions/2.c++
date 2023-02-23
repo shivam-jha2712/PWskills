@@ -8,7 +8,7 @@ int main() // MAIN DEFINATION
     cin.tie(0);
     cout.tie(0);
     int t;
-    cout << "Enter a Number" << endl;
+    cout << "Enter a Number: " << endl;
     cin >> t;
     while(t--)
     {
