@@ -36,13 +36,13 @@ int main()
 {
     int n;
     cin >> n;
-    std::vector<std::vector<int>> a(n, std::vector<int>(n, 0));
-    a = spiralMatrix(n);
+    std::vector<std::vector<int>> matrix(n, std::vector<int>(n, 0));
+    matrix = spiralMatrix(n);
     for (int i = 0; i < n; i++)
     {
         for (int j = 0; j < n; j++)
         {
-            cout << a[i][j] << ' ';
+            cout << matrix[i][j] << ' ';
         }
         cout << '\n';
     }
