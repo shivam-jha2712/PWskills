@@ -4,12 +4,12 @@ int largestElementIndex(int array[], int size)
 {
     int max = INT_MIN;
     int maxindex = -1;
-    for(int i= 0; i< size ; i++)
+    for (int i = 0; i < size; i++)
     {
-        if(array[i]> max)
+        if (array[i] > max)
         {
             max = array[i];
-            maxindex=i;
+            maxindex = i;
         }
     }
     return maxindex;
@@ -29,18 +29,19 @@ int main()
         cin >> array[i];
     }
 
+    // Finding the largest element for the first time...
     int indexOfLargest = largestElementIndex(array, size);
-
-    // array[indexOfLargest] = -1;
     int largestelement = array[indexOfLargest];
-    for(int i = 0; i< size; i++)
+
+    // if found the largest element then simply replace it with "-1"
+    for (int i = 0; i < size; i++)
     {
-        if(array[i] == largestelement)
+        if (array[i] == largestelement)
         {
             array[i] = -1;
         }
     }
-
+    // Again finding the largest element and then printing it
     int indexOfSecondLargest = largestElementIndex(array, size);
 
     cout << array[indexOfSecondLargest] << endl;
