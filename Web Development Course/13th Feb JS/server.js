@@ -31,3 +31,4 @@ console.log(data)
 // b) const : This is used to  store a constant data
 const naam = "Shivam Jha"
 console.log(naam)
+// kjsndndvknd
