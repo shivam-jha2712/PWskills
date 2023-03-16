@@ -14,11 +14,29 @@ using namespace std;
 int rectangleSumInMatrix(vector<vector<int>> &matrix, int l1, int r1, int l2, int r2)
 {
     int sum = 0;
-    for (int i = l1; i <= l2; i++)
+    
+    // prefix sum of array row wise
+    for(int i =0; i<matrix.size(); i++)
     {
-        for (int j = r1; j <= r2; j++)
+        for(int j= 1; j< matrix[0].size(); j++)
         {
-            sum += matrix[i][j];
+            // normal prefix sum of each row is being calculated
+            matrix[i][j] += matrix[i][j-1];
+        }
+    }
+
+    // Creating sum of the rectangle by adding all the given prefix sums in a manner
+    // Remember that the loop runs from l1 till l2 and not less than l2
+    for(int i = l1; i<= l2; i++)
+    {
+        // The first case is when the value of r1 = 0 our logic would give an index error 
+        if(r1 !=0)
+        {
+            sum += matrix[i][r2] - matrix[i][r1-1];
+        }
+        // Thus to tackle that error what we do is we just assign the value for the sum of "matrix[i][r1-1] = 0"
+        else{
+            sum += matrix[i][r2];
         }
     }
     return sum;
@@ -53,6 +71,16 @@ int main() // MAIN DEFINATION
     }
 
     int sum = rectangleSumInMatrix(matrix, l1, r1, l2, r2);
+cout << "Prefix sum matrix : " << endl;
+for (int i = 0; i < matrix.size(); i++)
+    {
+        for (int j = 0; j < matrix[i].size(); j++)
+        {
+            cout << matrix[i][j] << " ";
+        }
+        cout << endl;
+    }
+
 
     cout << "Sum : " << sum << endl;
     return 0;
