@@ -1,4 +1,6 @@
 // Consider two numbers where you can both add and subtract within a range
+// It is an example of experimental analysis as because they both may vary on the terms of experimental analysis and it is not equivalent always and instead 
+// We use Asymptotic analysis method to determine the time taken to perform the actual action in case of execution of a program
 #include<bits/stdc++.h>
 using namespace std;
 
