@@ -90,7 +90,7 @@ nav {
   }
   
   nav button {
-    background-color: #2d3e5b;
+    background-color: #fff ;
     color: #fff;
     border: none;
     padding: 0.5rem 1rem;
@@ -100,7 +100,7 @@ nav {
   }
   
   nav button:hover {
-    background-color: #F9A826;
+    background-color: #2d3e5b;
   }
   
 
