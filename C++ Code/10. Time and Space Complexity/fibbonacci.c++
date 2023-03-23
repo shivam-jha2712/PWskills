@@ -15,7 +15,10 @@ cout.tie(0);
     {
         arr[i] = arr[i-1] + arr[i-2];
     }
-cout << arr[n] << " ";
+cout << arr[n] << endl;
+cout  << "Space Complexity: O(n)" << endl;
+cout  << "Time Complexity: O(n)" << endl;
+
     // for(int i =0; i< n+1; i++)
     // {
     //     cout << arr[i] << " ";
