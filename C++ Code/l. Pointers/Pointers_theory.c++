@@ -17,5 +17,7 @@ int main() // MAIN DEFINATION
     // 2 - Create a pointer that can store address of a; And as x is an integer variable, so we need a pointer that can store address of integer data type.   
     int *ptr = &a;
     cout << ptr;
+
+    // 3 - Now since pointer to "a" can give the address stored at "ptr"  
     return 0;
 }
