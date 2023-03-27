@@ -19,8 +19,8 @@ int main() // MAIN DEFINATION
     int *ptr = &a;
     float *ptr_2 = &b;
     // pointer needs same data type as that of variable whose address it will be storing. Since "b" is float data type thus pointer for "b" will also be of float data type.
-    cout << ptr;
-    cout << ptr_2;
+    cout << ptr << endl;
+    cout << ptr_2 << endl;
 
     // 3 - Now since pointer to "a" can give the address stored at "ptr" . To identify the value stored at pointer "ptr" we need to use "*" in front of the pointer variable name to access the value at pointer "ptr".
     cout << *ptr << endl;   // This will give 10
