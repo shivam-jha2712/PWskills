@@ -17,15 +17,21 @@ int main() // MAIN DEFINATION
     cout << "Size of x: " << sizeof(x) << endl;
     cout << "Size of y: " << sizeof(y) << endl;
 
-// POINTER ARIRTHMETIC -- 1.) Increment  2.) Decrement 
+// VERY IMPORTANT POINT:
+    // Always remember that Pointer address deals in hexadecimal value and thus any increment or decrement will follow the same rule.
 
-//  Increment/ Decrement: 
+// HEXADECIMAL COUNTING: 
+    // 0 1 2 3 4 5 6 7 8 9 a b c d e f -> 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
+
+    // POINTER ARIRTHMETIC -- 1.) Increment  2.) Decrement
+
+    //  Increment/ Decrement:
     // a). It is different to that of integer arithmetic
     // b). Increment/Decrement of the pointer value refers to shift in memory location that pointer is pointing to.
     // c). Also the shift is dependent on the size of type of variable.
     // d). (ptr + i) = ptr address + i * sizeof(datatype_of_pointer)
 
-// Always remember that Pointer address deals in hexadecimal value and thus any increment or decrement will follow the same rule.
+
 
     cout << ptr << " " << (ptr + 1) << " " << (ptr - 1) << endl;
     // (ptr + 1) = ptr address + 1 * sizeof(datatype_of_pointer)
