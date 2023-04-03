@@ -13,7 +13,7 @@ int fib(int n)
     // Base Case for 0 and 1
     if(n<= 1)
     {
-        return 1;
+        return n;
     }
     else
     {
