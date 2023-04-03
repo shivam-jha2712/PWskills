@@ -1,17 +1,20 @@
 #include<bits/stdc++.h> // HEADER FILE
     
 using namespace std;
-    
+    // RECURSIVE APPROACH
 int sumOfDigits(int x) {
-    int result = 0; 
-    while(x!= 0)
+    // Base case - For single digit it will return itself
+    if(x >= 0 && x <= 9)
     {
-    int remainder = x % 10;
-    result = result + remainder;
-
-    x = x / 10;
+        return x;
     }
-return result;
+    // Assumption - that it would work for x/10 always
+    else
+    {
+    // Self work  - (remainder = x%10) + f(x/10) 
+        int remainder = x % 10;
+        return remainder + sumOfDigits(x/10);
+    }
 }
 
 int main() // MAIN DEFINATION
@@ -19,10 +22,9 @@ int main() // MAIN DEFINATION
     ios_base::sync_with_stdio(false);  //For fast I/O
     cin.tie(0);
     cout.tie(0);
-    
-    // int n;
-    // cin >> n;
-    // cout << sumOfDigits(n) << endl;
-    cout << sumOfDigits(2712) << endl;
+    int n ;
+    cin >> n;
+// f(n) = sumOfDigits(n) is the function that works on it.
+    cout << sumOfDigits(n) << endl;
     return 0;
 }
