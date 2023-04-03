@@ -15,7 +15,10 @@ int main() // MAIN DEFINATION
     double *ptrd = &y; // Since datatype of y is double thus that of its pointer variable is also double
 
     cout << "Size of x: " << sizeof(x) << endl;
+    cout << "Size of ptr: " << sizeof(ptr) << endl;
     cout << "Size of y: " << sizeof(y) << endl;
+    cout << "Size of ptrd: " << sizeof(ptrd) << endl;
+    // REMEMBER SIZE OF ptr is always the same and for 32 bit it will be 4 and for 64 bit it will be 8 bit
 
 // VERY IMPORTANT POINT:
     // Always remember that Pointer address deals in hexadecimal value and thus any increment or decrement will follow the same rule.
