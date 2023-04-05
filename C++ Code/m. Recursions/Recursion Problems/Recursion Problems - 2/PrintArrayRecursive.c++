@@ -17,7 +17,7 @@ cout << arr[i] << endl;
 recursiveArrays(arr, i+1, n);
 }
 
-int main() // MAIN DEFINATION
+int main() // MAIN DEFINATION 
 {
     ios_base::sync_with_stdio(false);  //For fast I/O
     cin.tie(0);
