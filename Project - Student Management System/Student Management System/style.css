@@ -1,37 +1,106 @@
-/* Style the form container */
-      .form-container {
-        width: 50%;
-        margin: auto;
-        padding: 20px;
-        border: 1px solid #ccc;
-        border-radius: 10px;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-      }
-      
-      /* Style the form fields */
-      input[type=text], select {
-        width: 100%;
-        padding: 12px 20px;
-        margin: 8px 0;
-        display: inline-block;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        box-sizing: border-box;
-      }
-      
-      /* Style the submit button */
-      input[type=submit] {
-        width: 100%;
-        background-color: #4CAF50;
-        color: white;
-        padding: 14px 20px;
-        margin: 8px 0;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-      }
-      
-      /* Add a hover effect to the submit button */
-      input[type=submit]:hover {
-        background-color: #45a049;
-      }
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body{
+    background-image: url('bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Poppins", sans-serif;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+  position: relative;
+  width: 1200px;
+  height: 1200px;
+  margin-left: 30px;
+  margin: 0 auto;
+  padding: 30px;
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+}
+
+
+
+h1 {
+text-align: center;
+}
+
+form {
+display: flex;
+flex-wrap: wrap;
+}
+
+label {
+flex-basis: 100%;
+margin-bottom: 10px;
+}
+
+input {
+flex-basis: 100%;
+padding: 10px;
+margin-bottom: 20px;
+border-radius: 5px;
+border: 1px solid #ccc;
+}
+
+button {
+padding: 10px 20px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+}
+
+button[type="submit"] {
+background-color: #4CAF50;
+color: white;
+}
+
+button[type="submit"]:hover {
+background-color: #3e8e41;
+}
+
+button {
+background-color: #cd3c32;
+color: white;
+}
+
+button:hover {
+background-color: #b20505;
+}
+
+
+table {
+width: 100%;
+border-collapse: collapse;
+margin-top: 20px;
+}
+
+th, td {
+padding: 10px;
+text-align: left;
+border-bottom: 1px solid #ddd;
+}
+
+th {
+background-color: #4CAF50;
+color: white;
+
+}
+

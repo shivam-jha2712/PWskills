@@ -1,35 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Student Management System</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div class="form-container">
-        <h2>Student Information</h2>
-        <form>
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" placeholder="Enter your name">
-
-            <label for="email">Email</label>
-            <input type="text" id="email" name="email" placeholder="Enter your email">
-
-            <label for="dob">Date of Birth</label>
-            <input type="text" id="dob" name="dob" placeholder="Enter your date of birth">
-
-            <label for="gender">Gender</label>
-            <select id="gender" name="gender">
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-                <option value="other">Other</option>
-            </select>
-
-            <input type="submit" value="Submit">
+    <div class="container">
+        <h1>Student Management System</h1>
+        <form id="student-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" required>
+            <button type="submit">Add Student</button>
         </form>
+        <p id="error"></p>
+        <table id="students-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
     </div>
+    <script src="script.js"></script>
 </body>
 
 </html>
+
