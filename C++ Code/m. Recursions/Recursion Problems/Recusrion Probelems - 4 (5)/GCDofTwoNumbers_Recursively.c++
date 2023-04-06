@@ -24,6 +24,9 @@ int main() // MAIN DEFINATION
     cin.tie(0);
     cout.tie(0);
     
+    int x = gcd(40, 48);
+
+    cout << x << endl;
 
 
     return 0;
