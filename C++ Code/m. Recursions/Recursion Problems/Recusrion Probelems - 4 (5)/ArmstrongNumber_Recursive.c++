@@ -2,7 +2,7 @@
 
 using namespace std;
 
-bool armStrong(int n, int d){
+int armStrong(int n, int d){
     if(n ==0)
     {
         return 0;
