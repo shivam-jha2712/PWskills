@@ -9,6 +9,7 @@ void selectionSort(vector<int> &v)
     {
         // Taking the ith element for every iteration to be the minimum element
         int min_Idx = i;
+        // Finding minmum in unsorted array
         for (int j = i + 1; j < n; j++)
         {
             // Comparing the ith element in every iteration to its immediate next element, and keep on doing it till the nth element and if found that it is minimum updating the index of minimum element
@@ -20,7 +21,7 @@ void selectionSort(vector<int> &v)
         // Followed by there might be the case that that the minmum idx already has the same value then no swap will occur thus to avoid it we pass a check that if the minmum idx is not the same as the idx assigned to minmum idx previously then swap them.
         if (min_Idx != i)
         {
-            swap(v[i], v[min_Idx]);
+            swap(v[i], v[min_Idx]); // Placing minimum at beginning
         }
     }
 }
@@ -50,3 +51,8 @@ int main() // MAIN DEFINATION
 
     return 0;
 }
+
+// Example : 5 8 4 9 2
+// Answer :  2 4 5 8 9
+
+// Time Complexity: O(n^2) - Best Case, O(n^2) - Worst Case
