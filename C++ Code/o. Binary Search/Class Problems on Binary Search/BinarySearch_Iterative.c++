@@ -16,7 +16,8 @@ int binarySearch(vector<int> &input, int target)
     while (lo <= hi)
     {
         // Calc mid point for the search
-        int mid = (lo + hi) / 2;
+        // int mid = (lo + hi) / 2;
+        int mid = lo + (hi - lo) / 2; // Modified to tackle overflow
         if (input[mid] == target)
             return mid;
 
