@@ -1,5 +1,6 @@
 // Approach : 3
 
+// Time complexity : O(logn)
 #include <bits/stdc++.h> // HEADER FILE
 
 using namespace std;
@@ -41,7 +42,6 @@ int main() // MAIN DEFINATION
     cout << findSquareroot(n);
     return 0;
 }
-// Time complexity : O(logN)
 
 // Approach - 2
 
