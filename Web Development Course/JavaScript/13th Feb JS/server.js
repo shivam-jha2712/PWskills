@@ -33,6 +33,17 @@ const naam = "Shivam Jha"
 // console.log(naam)
 
 
+
+// ASSIGNMENT OPERATOR (=)
 // Task 1: Print the Highscore of a game
 let highScore = 300
 console.log(highScore)
+
+// Task 2: Print the Price of Courses
+let priceOfCourses = 3500
+console.log(priceOfCourses)
+
+// Since let is used because the highScore could change invariably and so could the price of the courses thus
+
+
+
