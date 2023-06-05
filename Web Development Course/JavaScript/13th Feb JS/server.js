@@ -15,7 +15,7 @@ console.log("Hello I am Shivam Jha");
 // - Array: [] - Same as list in python (thus can store data of various data types in general)
 // Example: 
 let names = ["Shivam", "Jha", "Hitesh", "Ram"]
-console.log(names)
+// console.log(names)
 
 // (Also it is important to note that js is very forgiving thus if you forget to put ";" there would be no such error)
 
@@ -26,8 +26,13 @@ console.log(names)
 
 let data = "Shivam Jha"
 data = "Hitesh"
-console.log(data)
+// console.log(data)
 
 // b) const : This is used to  store a constant data
 const naam = "Shivam Jha"
-console.log(naam)
+// console.log(naam)
+
+
+// Task 1: Print the Highscore of a game
+let highScore = 300
+console.log(highScore)
