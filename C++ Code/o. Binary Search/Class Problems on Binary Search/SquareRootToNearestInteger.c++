@@ -17,6 +17,24 @@ int findSquareroot(int n)
         int mid = lo + (hi - lo) / 2;
         // Now we take in check that if mid*mid <= n then it becomes certain that anything to the left of mid would be definetly less than n.
         // So we just it and keep on updating both the ans and the lo value.
+
+        // There might be chances that the condition of mid*mid <= n will cause TLE thus we need to adjust the condition such as
+        /*
+        if(mid == x/mid)
+        {
+            return mid;
+        }
+        else if (mid > x / mid)
+        {
+            hi = mid - 1;
+        }
+        else
+        {
+            lo = mid + 1;
+        }
+
+        return hi;
+        */
         if (mid * mid <= n)
         {
             ans = mid;
