@@ -2,6 +2,8 @@
 // TO RUN : node __filename.js__
 
 // Task 1 : Conditions Checking by the IF block 
+console.log("// If-else Conditions: ");
+
 let age = 21;
 
 if (age >= 18) {
@@ -15,6 +17,7 @@ else {
 
 
 // Task 2: Multiple conditional
+console.log("// Multiple if-else Conditions: ");
 
 let signal = "red";
 if (signal === "red") {
@@ -33,6 +36,7 @@ else {
 
 
 // Task 3 : Switch Case (used as alternative of if-else)
+console.log("// Switch case Conditions: ");
 
 let user = "Jd";
 
@@ -54,3 +58,40 @@ switch (user) {
 
 
 // Task 4 : LOOPS (DO- WHILE, WHILE, FOR)
+
+// FOR LOOP
+console.log("For Loop : ");
+for (let i = 0; i < 5; i++) {
+    console.log(i);
+}
+
+// WHILE LOOP
+console.log("While Loops : ");
+let i = 0;
+
+while (i < 5) {
+    console.log(i);
+    i++;
+}
+
+// DO-WHILE LOOP
+console.log("Do-While Loops : ");
+let j = 1
+
+do {
+    console.log(j);
+    j++;
+}
+while (j > 5);
+
+
+// Task 5 : Ternary Operators/Conditions
+
+// ? = if and : = else
+// condition ? TRUE : FALSE
+
+console.log("Ternary Conditions: ");
+isLoggedIn = true;
+isLoggedIn ? console.log("Home Page") : console.log("Not Logged In");
+
+// Note : Even if the variable isLoggedIn not mentioned under any of the three variable  defining stratergy of var, let or const. Still it is working because JavaScript is a loosely typed langauge thus it even works fine even though the variable is not defined
