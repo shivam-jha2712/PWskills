@@ -14,6 +14,12 @@ console.log(c);
 console.log("Accessing array elements is done via indexing: ");
 // JavaScript follows 0 based indexing and thus 
 let i = 0;
-for (i = 0; i<a.length; i++) {
+for (i = 0; i < a.length; i++) {
     console.log(a[i]);
 }
+
+// Since arrays are mutable thus could be modified
+a[4] = 5;
+console.log(a);
+
+console.log(a[14]); // Since asking for something which is not already present thus gives and error of undefined
