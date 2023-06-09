@@ -3,7 +3,7 @@
 
 using namespace std;
 
-// 7 2 3 4 5 6 - Rotated sorted array (ans  = 1)
+// 7 2 3 4 5 6 - Rotated sorted array (ans  =1)
 // Mid  = 3(index - 2)
 
 // since input[mid] < input[lo] thus, hi = mid - 1
