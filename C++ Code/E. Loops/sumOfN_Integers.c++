@@ -15,8 +15,9 @@ int main() // MAIN DEFINATION
         int Num;
         cin >> Num;
         sum += Num;
-        n--;
-    } while (n > 0);
+        // n--;
+        // } while (n > 0);
+    } while (n--);
     cout << sum << endl;
     return 0;
 }

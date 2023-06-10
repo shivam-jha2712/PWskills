@@ -13,9 +13,10 @@ int main() // MAIN DEFINATION
 
     int c = a && b;
     int d = a || b;
-    // int e = a ! b;
+    int e = !a;
 
     cout << "logical and(&&) : " << c << " "
-         << "logical OR(||) : " << d << " " << endl;
+         << "logical OR(||) : " << d << " "
+         << "logical Not (!) : " << e << " " << endl;
     return 0;
 }
