@@ -42,4 +42,5 @@ int main() // MAIN DEFINATION
     Rectangle r3(r2);
     cout << r3.l << " " << r3.b << endl;
     return 0;
+    
 }
