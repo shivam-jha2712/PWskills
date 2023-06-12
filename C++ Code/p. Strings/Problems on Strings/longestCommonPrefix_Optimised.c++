@@ -15,15 +15,16 @@ string longestCommonPrefix(vector<string> &v)
         int j = 0;
         // compare characters of s1 and v[i] until the characters are equal or one of the strings ends
         while (j < s1.size() && j < v[i].size() && s1[j] == v[i][j])
-        {
+        { // finding the common prefix length
             j++;
         }
 
-        ans_length = min(ans_length, j); // update the answer length with the minimum common prefix length
+        ans_length = min(ans_length, j); // update the answer length with the minimum common prefix length (i.e; updating length of ans string)
     }
 
     // return the longest common prefix
-    return s1.substr(0, ans_length);
+    string ans = s1.substr(0, ans_length);
+    return ans;
 }
 
 int main() // MAIN DEFINITION
