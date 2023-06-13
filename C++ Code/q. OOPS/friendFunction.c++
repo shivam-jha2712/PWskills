@@ -49,5 +49,5 @@ The friend function print() is defined outside the class and has access to the p
 Inside the print() function, the private member x of the object obj is accessed and printed.
 In the main() function, an object obj of class A is created with an x value of 5.
 The private member x cannot be accessed directly outside the class. However, the print() function, being a friend of class A, is able to access and print the value of x.
-Friend functions are useful when you want to allow external functions to access the private members of a class. They provide access to the private members without making those functions members of the class itself. In this example, the print() function is declared as a friend of class A, which allows it to access the private member x and print its value.
+Friend functions are useful when you want to allow external functions to access the private members of a class. They provide access to the private members without making those functions members of the class itself. In this example, the print() function is declared as a friend of class A, which allows it to access the private member x and print its value. 
 */
