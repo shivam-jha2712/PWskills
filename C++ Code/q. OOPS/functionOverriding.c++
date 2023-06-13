@@ -1,7 +1,7 @@
 #include <bits/stdc++.h> // HEADER FILE
 
 using namespace std;
-
+// Runtime Polymorphism is achieved
 class Parent
 {
 public:
