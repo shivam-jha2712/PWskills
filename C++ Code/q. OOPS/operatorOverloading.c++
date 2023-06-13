@@ -20,10 +20,12 @@ public:
     // Overloaded "+" operator to add two complex numbers
     Complex operator+(Complex &c)
     {
-        Complex ans(0, 0);        // Create a new Complex object to store the result
+        Complex ans(0, 0); // Create a new Complex object to store the result
+        // The first "real" here is that of c1 and "c.real" give real part of c2
         ans.real = real + c.real; // Add the real parts of the complex numbers
-        ans.img = img + c.img;    // Add the imaginary parts of the complex numbers
-        return ans;               // Return the result
+        // The first "img" here is that of c1 and "c.img" give img. part of c2
+        ans.img = img + c.img; // Add the imaginary parts of the complex numbers
+        return ans;            // Return the result
     }
 };
 
