@@ -1,7 +1,7 @@
 #include <bits/stdc++.h> // HEADER FILE
 
 using namespace std;
-
+// For Compile Time PolyMorphism
 class Sum
 {
 public:
@@ -34,8 +34,8 @@ int main() // MAIN DEFINITION
     cout.tie(0);
 
     Sum s;
-    s.add(2, 3);     // Call the add(int, int) function
-    s.add(2, 3, 4);  // Call the add(int, int, int) function
+    s.add(2, 3);      // Call the add(int, int) function
+    s.add(2, 3, 4);   // Call the add(int, int, int) function
     s.add(2.84, 3.3); // Call the add(double, double) function
 
     return 0;
