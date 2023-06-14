@@ -81,6 +81,7 @@ Node *reverseKAtTime(Node *&head, int k)
     }
 
     // For the linked list which is from k+1 to nth node
+    // currptr will give us (k+1)th node
     if (currptr != NULL)
     {
         Node *new_head = reverseKAtTime(currptr, k);
