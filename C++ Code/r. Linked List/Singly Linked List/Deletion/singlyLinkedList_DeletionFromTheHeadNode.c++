@@ -71,6 +71,7 @@ void insertAtPosition(Node *&head, int val, int pos)
     // jaha pe temp point kar raha tha i.e;(pos-1) us node ka next kya hoga soch. (temp->next) hai na, toh usko ab kisko point karna hai new node ko. bas woh wahi ho raha hai
 }
 
+// Function to update a node at an arbitrary position in linked list.
 void updateAtPosition(Node *&head, int k, int val)
 {
 
@@ -85,6 +86,14 @@ void updateAtPosition(Node *&head, int k, int val)
 
     // temp will be pointing to the kth node
     temp->val = val; // On reaching we update the value.
+}
+
+// Function to delete the node from the beginning of the linked list
+void deleteAtHead(Node *&head)
+{
+    Node *temp = head; // temp is pointing to the node to be deleted.
+    head = head->next;
+    free(temp); // the free function free up the memory allocated of the pointer passed to it.
 }
 
 // But while Printing we are passing it by value as we will be not changing anything
@@ -125,6 +134,9 @@ int main() // MAIN DEFINATION
     display(head);
 
     updateAtPosition(head, 3, 5); // Update at the position 3 of the linked list a new node with value 5
+    display(head);
+
+    deleteAtHead(head); // Delete at the head of the linked list.
     display(head);
 
     return 0;

@@ -88,6 +88,29 @@ void updateAtPosition(Node *&head, int k, int val)
     temp->val = val; // On reaching we update the value.
 }
 
+// Function to delete the node from the beginning of the linked list
+void deleteAtHead(Node *&head)
+{
+    Node *temp = head; // temp is pointing to the node to be deleted.
+    head = head->next;
+    free(temp); // the free function free up the memory allocated of the pointer passed to it.
+}
+
+// Function to delete the node from the tail of the list.
+void deleteAtTail(Node *&head)
+{
+
+    Node *second_last = head;               // Create a node that will start with head
+    while (second_last->next->next != NULL) // And the condition will be that if its->next->next is not NULL, till then we keep on updating the second last->next pointer.
+    {
+        second_last = second_last->next;
+    }
+
+    // Now by the help of temp pointer we reach to the second last node
+    Node *temp = second_last->next;
+    second_last->next = NULL; // And then we update the next of second last node with NULL.
+    free(temp);               // followed by freeing the node pointed by temp
+}
 // But while Printing we are passing it by value as we will be not changing anything
 // Traversal of Linked List to display the linked list
 void display(Node *head)
@@ -126,6 +149,12 @@ int main() // MAIN DEFINATION
     display(head);
 
     updateAtPosition(head, 3, 5); // Update at the position 3 of the linked list a new node with value 5
+    display(head);
+
+    deleteAtHead(head); // Delete at the head of the linked list.
+    display(head);
+
+    deleteAtTail(head); // Delete at the tail of the linked list.
     display(head);
 
     return 0;
