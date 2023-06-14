@@ -59,8 +59,18 @@ public:
         cout << "NULL" << endl;
     }
 };
+// This is not reversal of the Linked List instead it is just printing
+void reverseLinkedList(Node *head) // Printing using recursion
+{
+    // Base case
+    if (head == NULL)
+        return;
 
-void 
+    // Assumption: Except the first node all the nodes would be printed in reverse fashion
+    // Recursive case : Self work
+    reverseLinkedList(head->next);
+    cout << head->val << " ";
+}
 
 int main() // MAIN DEFINATION
 {
@@ -71,23 +81,26 @@ int main() // MAIN DEFINATION
     // Creating an Object ll of class LinkedList
     LinkedList ll;
 
-    // ll.insertAtTail(1);
-    // ll.insertAtTail(2);
-    // ll.insertAtTail(3);
-    // ll.insertAtTail(4);
-    // ll.insertAtTail(5);
-    // ll.display();
-
-    int n;
-    cin >> n;
-
-    for (int i = 0; i < n; i++)
-    {
-        int val;
-        cin >> val;
-        ll.insertAtTail(val);
-    }
+    ll.insertAtTail(1);
+    ll.insertAtTail(2);
+    ll.insertAtTail(3);
+    ll.insertAtTail(4);
+    ll.insertAtTail(5);
     ll.display();
+
+    // Print reverseLinkedList
+    reverseLinkedList(ll.head);
+
+    // int n;
+    // cin >> n;
+
+    // for (int i = 0; i < n; i++)
+    // {
+    //     int val;
+    //     cin >> val;
+    //     ll.insertAtTail(val);
+    // }
+    // ll.display();
 
     return 0;
 }
