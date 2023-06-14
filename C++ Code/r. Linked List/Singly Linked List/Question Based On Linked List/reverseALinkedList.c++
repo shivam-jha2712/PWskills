@@ -60,6 +60,8 @@ public:
     }
 };
 
+void 
+
 int main() // MAIN DEFINATION
 {
     ios_base::sync_with_stdio(false); // For fast I/O
