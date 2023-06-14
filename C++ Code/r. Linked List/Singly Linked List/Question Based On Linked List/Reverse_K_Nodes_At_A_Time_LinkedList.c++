@@ -108,7 +108,7 @@ int main() // MAIN DEFINATION
     ll.insertAtTail(5);
     ll.insertAtTail(6);
     ll.display();
-    ll.head = reverseKAtTime(ll.head, 2);
+    ll.head = reverseKAtTime(ll.head, 3);
     ll.display();
 
     // int n;
