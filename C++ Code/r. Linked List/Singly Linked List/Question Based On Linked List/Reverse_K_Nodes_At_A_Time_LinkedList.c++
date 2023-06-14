@@ -106,10 +106,17 @@ int main() // MAIN DEFINATION
     ll.insertAtTail(3);
     ll.insertAtTail(4);
     ll.insertAtTail(5);
-    ll.insertAtTail(6);
+    // ll.insertAtTail(6);
     ll.display();
     ll.head = reverseKAtTime(ll.head, 3);
     ll.display();
+
+    /*
+
+    1-> 2-> 3-> 4-> 5-> 6-> NULL
+    3-> 2-> 1-> 6-> 5-> 4-> NULL
+
+    */
 
     // int n;
     // cin >> n;
