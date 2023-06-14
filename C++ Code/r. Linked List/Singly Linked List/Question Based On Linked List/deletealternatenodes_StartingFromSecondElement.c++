@@ -60,6 +60,19 @@ public:
     }
 };
 
+void deleteAlternateNode(Node *head)
+{
+    Node *curr_node = head;
+    while (curr_node != NULL && curr_node->next != NULL)
+    {
+        Node *temp = curr_node->next;            // This is the Node to be deleted
+        curr_node->next = curr_node->next->next; // Making curr_node point to the node after the deleted node
+        free(temp);                              // Free the temp pointer which was pointing to curr_node->next
+
+        curr_node = curr_node->next; // This is updating the curr_node to its node whose next is to be deleted
+    }
+}
+
 int main() // MAIN DEFINATION
 {
     ios_base::sync_with_stdio(false); // For fast I/O
@@ -74,6 +87,10 @@ int main() // MAIN DEFINATION
     ll.insertAtTail(3);
     ll.insertAtTail(4);
     ll.insertAtTail(5);
+    ll.display();
+
+    // Calling the function to deleteAlternateNodes
+    deleteAlternateNode(ll.head);
     ll.display();
 
     // int n;
