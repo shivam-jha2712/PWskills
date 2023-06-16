@@ -61,28 +61,21 @@ public:
     }
 };
 
-// Function to check if two linked lists are equal
-bool EqualLinkedList(Node *&head1, Node *&head2)
+Node *IntersectingLinkedList(Node *&head1, Node *&head2)
 {
-    Node *temp1 = head1; // Pointer to traverse the first linked list
-    Node *temp2 = head2; // Pointer to traverse the second linked list
+    Node *temp1 = head1;
+    Node *temp2 = head2;
 
-    while (temp1 != NULL && temp2 != NULL) // Traverse both lists simultaneously
+    while (temp1 != NULL && temp2 != NULL)
     {
-        if (temp1->val != temp2->val) // If values at the current nodes are not equal
+        if (temp1->next->val != temp2->next->val)
         {
-            return false; // Linked lists are not equal, return false
+            return NULL;
         }
-
-        temp1 = temp1->next; // Move to the next node in the first linked list
-        temp2 = temp2->next; // Move to the next node in the second linked list
+        temp1 = temp1->next;
+        temp2 = temp2->next;
     }
-
-    // At this point, either temp1 is NULL or temp2 is NULL or both are NULL
-    // If both are NULL, it means both linked lists have been traversed completely
-    // If either of them is not NULL, it means the lengths of the linked lists are different
-    // In both cases, the linked lists are not equal
-    return (temp1 == NULL && temp2 == NULL);
+    return temp1;
 }
 
 int main() // MAIN DEFINATION
@@ -109,21 +102,18 @@ int main() // MAIN DEFINATION
     ll2.insertAtTail(5);
     ll2.display();
 
-    if (EqualLinkedList(ll1.head, ll2.head))
-        cout << "true" << endl;
-    else
-        cout << "false" << endl;
+    ll1.head = IntersectingLinkedList(ll1.head, ll2.head);
+    ll1.display();
+        // int n;
+        // cin >> n;
 
-    // int n;
-    // cin >> n;
+        // for (int i = 0; i < n; i++)
+        // {
+        //     int val;
+        //     cin >> val;
+        //     ll.insertAtTail(val);
+        // }
+        // ll.display();
 
-    // for (int i = 0; i < n; i++)
-    // {
-    //     int val;
-    //     cin >> val;
-    //     ll.insertAtTail(val);
-    // }
-    // ll.display();
-
-    return 0;
+        return 0;
 }
