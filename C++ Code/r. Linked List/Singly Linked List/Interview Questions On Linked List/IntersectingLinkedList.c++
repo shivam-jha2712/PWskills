@@ -61,21 +61,68 @@ public:
     }
 };
 
-Node *IntersectingLinkedList(Node *&head1, Node *&head2)
+// Step-1: Function to find length of Linked list
+int getLength(Node *head)
 {
-    Node *temp1 = head1;
-    Node *temp2 = head2;
+    int length = 0;       // Variable to store the length of the linked list
+    Node *current = head; // Pointer to traverse the linked list, starting from the head
 
-    while (temp1 != NULL && temp2 != NULL)
+    // Traverse the linked list until reaching the end (NULL)
+    while (current != NULL)
     {
-        if (temp1->next->val != temp2->next->val)
-        {
-            return NULL;
-        }
-        temp1 = temp1->next;
-        temp2 = temp2->next;
+        length++;                // Increment the length for each node encountered
+        current = current->next; // Move to the next node
     }
-    return temp1;
+
+    return length; // Return the final length of the linked list
+}
+
+// Step-2: Move head by k moves
+Node *moveHeadByK(Node *head, int k)
+{
+    Node *current = head; // Pointer to traverse the linked list, starting from the head
+
+    // Move the current pointer k positions forward in the linked list
+    while (k > 0)
+    {
+        current = current->next; // Move to the next node
+        k--;                     // Decrement k to keep track of the number of positions moved
+    }
+
+    return current; // Return the new head node after moving k positions
+}
+Node *getIntersectionNode(Node *head1, Node *head2)
+{
+    Node *ptr1 = head1;
+    Node *ptr2 = head2;
+
+    // Step 1: Find the lengths of both linked lists
+    int length1 = getLength(head1);
+    int length2 = getLength(head2);
+
+    // Step 2: Move the longer list's pointer to the same starting position as the shorter list
+    int diff = abs(length1 - length2);
+    if (length1 > length2)
+    {
+        ptr1 = moveHeadByK(head1, diff);
+    }
+    else
+    {
+        ptr2 = moveHeadByK(head2, diff);
+    }
+
+    // Step 3: Traverse both lists until an intersection is found
+    while (ptr1 != NULL && ptr2 != NULL)
+    {
+        if (ptr1 == ptr2)
+        {
+            return ptr1; // Intersection found
+        }
+        ptr1 = ptr1->next;
+        ptr2 = ptr2->next;
+    }
+
+    return NULL; // No intersection found
 }
 
 int main() // MAIN DEFINATION
@@ -93,27 +140,38 @@ int main() // MAIN DEFINATION
     ll1.insertAtTail(3);
     ll1.insertAtTail(4);
     ll1.insertAtTail(5);
-    ll1.display();
+    // 1->2->3->4->5->NULL
 
-    ll2.insertAtTail(1);
-    ll2.insertAtTail(2);
-    ll2.insertAtTail(3);
-    ll2.insertAtTail(4);
-    ll2.insertAtTail(5);
+    ll2.insertAtTail(6);
+    ll2.insertAtTail(7);
+    ll2.head->next->next = ll1.head->next->next->next;
+    // Creating an intersection
+    // 6->7->4->5->NULL
+
+    ll1.display();
     ll2.display();
 
-    ll1.head = IntersectingLinkedList(ll1.head, ll2.head);
-    ll1.display();
-        // int n;
-        // cin >> n;
+    cout << endl;
 
-        // for (int i = 0; i < n; i++)
-        // {
-        //     int val;
-        //     cin >> val;
-        //     ll.insertAtTail(val);
-        // }
-        // ll.display();
+    Node *intersection = getIntersectionNode(ll1.head, ll2.head);
+    if (intersection)
+    {
+        cout << "Intersecting Node : " << intersection->val << endl;
+    }
+    else
+    {
+        cout << "No Intersecting Node" << endl;
+    }
+    // int n;
+    // cin >> n;
 
-        return 0;
+    // for (int i = 0; i < n; i++)
+    // {
+    //     int val;
+    //     cin >> val;
+    //     ll.insertAtTail(val);
+    // }
+    // ll.display();
+
+    return 0;
 }
