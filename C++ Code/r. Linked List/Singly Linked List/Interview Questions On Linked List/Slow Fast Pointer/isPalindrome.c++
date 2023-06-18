@@ -60,31 +60,47 @@ public:
     }
 };
 
-// Function to find if a cycle exists in a Linked List using slow and fast pointers
-
-bool isCyclic(Node *head)
+bool isPalindrome(Node *&head)
 {
-    if (head == NULL)
-    {
-        return false; // If the head is NULL, the list is empty and cannot be cyclic
-    }
-
-    Node *slow = head; // Slow pointer moves one step at a time
-    Node *fast = head; // Fast pointer moves two steps at a time
+    // Step1: Find Middle element
+    Node *slow = head;
+    Node *fast = head;
 
     while (fast != NULL && fast->next != NULL)
     {
-        slow = slow->next;       // Move slow pointer one step forward
-        fast = fast->next->next; // Move fast pointer two steps forward
-
-        if (slow == fast)
-        {
-            cout << slow->val << endl;
-            return true; // If slow and fast pointers meet, there is a cycle in the list
-        }
+        slow = slow->next;
+        fast = fast->next->next;
     }
 
-    return false; // If the loop completes without finding a cycle, the list is acyclic
+    // Step 2: Break the linked List
+    Node *curr = slow->next;
+    Node *prev = slow;
+    slow->next = NULL;
+
+    // Step 3: Reverse the second half of the linked list
+    while (curr != NULL)
+    {
+        Node *next = curr->next;
+        curr->next = prev;
+
+        prev = curr;
+        curr = next;
+    }
+
+    // Step 4: Compare part 2 of the linked list with the first half
+    Node *headtop = head;
+    Node *tail = prev;
+
+    while (tail != NULL)
+    {
+        if (headtop->val != tail->val) // if value is not same, return false
+            return false;
+
+        headtop = headtop->next; // move headtop by one node
+        tail = tail->next;       // move tail by one node
+    }
+
+    return true; // if same then return true
 }
 
 int main() // MAIN DEFINATION
@@ -100,23 +116,17 @@ int main() // MAIN DEFINATION
     ll.insertAtTail(2);
     ll.insertAtTail(3);
     ll.insertAtTail(4);
-    ll.insertAtTail(5);
-    ll.insertAtTail(6);
-    ll.insertAtTail(7);
-    ll.insertAtTail(8);
-    ll.insertAtTail(9);
+    ll.insertAtTail(2);
+    ll.insertAtTail(1);
     ll.display();
 
-    // Adding a cycle
-    ll.head->next->next->next->next->next->next = ll.head->next->next;
-    // cout << isCyclic(ll.head) << endl;
-    if (isCyclic(ll.head))
+    if (isPalindrome(ll.head))
     {
-        cout << "Has a cycle" << endl;
+        cout << "Is a Palindrome" << endl;
     }
     else
     {
-        cout << "Not has a cycle" << endl;
+        cout << "Is not a Palindrome" << endl;
     }
 
     // int n;

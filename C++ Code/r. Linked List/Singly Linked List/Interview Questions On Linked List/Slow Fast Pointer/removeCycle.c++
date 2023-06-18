@@ -87,6 +87,28 @@ bool isCyclic(Node *head)
     return false; // If the loop completes without finding a cycle, the list is acyclic
 }
 
+void removeCycle(Node *&head) // assuming that the linked list has a cycle
+{
+    Node *slow = head;
+    Node *fast = head;
+
+    do
+    { // Moving the pointers accordingly
+        slow = slow->next;
+        fast = fast->next->next;
+    } while (slow != fast); // the condition would have been true in first step itself thus we use a do-while loop to check it.
+
+    Node *check = head; // assinging a check pointer to the head node
+
+    while (slow->next != check->next)
+    {
+        slow = slow->next;   // moving slow pointer by one step
+        check = check->next; // moving check pointer by one step
+    }
+
+    slow->next = NULL;
+}
+
 int main() // MAIN DEFINATION
 {
     ios_base::sync_with_stdio(false); // For fast I/O
@@ -109,7 +131,10 @@ int main() // MAIN DEFINATION
 
     // Adding a cycle
     ll.head->next->next->next->next->next->next = ll.head->next->next;
-    // cout << isCyclic(ll.head) << endl;
+
+    // Calling function to removeCycle
+    removeCycle(ll.head);
+
     if (isCyclic(ll.head))
     {
         cout << "Has a cycle" << endl;
