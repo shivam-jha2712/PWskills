@@ -87,6 +87,44 @@ public:
         new_node->next = head;
         head = new_node;
     }
+
+    void deleteAtStart()
+    {
+
+        if (head == NULL)
+        {
+            return;
+        }
+
+        Node *temp = head;
+        Node *tail = head;
+
+        while (tail->next != head)
+        {
+            tail = tail->next;
+        }
+
+        tail->next = head->next;
+        head = head->next;
+        free(temp);
+    }
+
+    void deleteAtTail()
+    {
+        if (head == NULL)
+            return;
+
+        Node *tail = head;
+
+        while (tail->next->next != head)
+        {
+            tail = tail->next;
+        }
+        // After the loop tail points to the second last node in the list
+        Node *temp = tail->next; // temp pointer created that points to the next of the tail
+        tail->next = head;       // followed by the next of tail pointing to the head
+        free(temp);              // and then free the temp pointer pointed node.
+    }
 };
 
 int main()
@@ -99,11 +137,14 @@ int main()
     cll.insertAtStart(3);
     cll.insertAtStart(4);
     cll.insertAtStart(5);
-
-    // Display the circular linked list
+    cll.insertAtStart(6);
     cll.display();
 
-    
+    cll.deleteAtStart();
+    cll.display();
+
+    cll.deleteAtTail();
+    cll.display();
 
     return 0;
 }
