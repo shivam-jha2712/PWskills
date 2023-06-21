@@ -47,20 +47,21 @@ public:
     {
         return this->currSize == this->capacity;
     }
-
+    
     // push FUNCTION: to push element in the stack, here at the head
     void push(int data)
     {
         // Check before adding if already full
         if (this->currSize == this->capacity)
         {
-            cout << "Overflow" << endl;
-            return;
+            cout << "Overflow" << endl; // Display overflow message if stack is already full
+            return;                     // Exit the function
         }
-        Node *new_node = new Node(data);
-        new_node->next = this->head;
-        this->head = new_node;
-        this->currSize++; // increment currentSize to check if it does not crosses the boundary condition of overflow
+
+        Node *new_node = new Node(data); // Create a new node with the given data
+        new_node->next = this->head;     // Set the next pointer of the new node to the current head
+        this->head = new_node;           // Set the head to the new node, making it the new top of the stack
+        this->currSize++;                // Increment the current size of the stack to reflect the addition of an element
     }
 
     // pop FUNCTION: to pop element, here to remove the node from head
@@ -69,17 +70,18 @@ public:
         // Check for underflow condition
         if (this->head == NULL)
         {
-            cout << "Underflow!!" << endl;
-            return INT_MIN;
+            cout << "Underflow!!" << endl; // Display underflow message if stack is empty
+            return INT_MIN;                // Return minimum integer value to indicate underflow
         }
-        Node *new_head = this->head->next;
-        this->head->next = NULL;
-        Node *toBeRemoved = this->head;
-        int result = toBeRemoved->data;
-        delete toBeRemoved;
-        this->head = new_head;
-        this->currSize--;
-        return result;
+
+        Node *new_head = this->head->next; // Store the next node after the current head
+        this->head->next = NULL;           // Set the next pointer of the current head to NULL
+        Node *toBeRemoved = this->head;    // Store the current head node to be removed
+        int result = toBeRemoved->data;    // Retrieve the data value of the node to be removed
+        delete toBeRemoved;                // Delete the node to be removed from memory
+        this->head = new_head;             // Update the head to the new head node
+        this->currSize--;                  // Decrease the current size of the stack
+        return result;                     // Return the data value of the removed node
     }
 
     // size FUNCTION: to give the size of the function
