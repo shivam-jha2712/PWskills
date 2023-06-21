@@ -58,7 +58,7 @@ public:
         return this->top == -1; // if top-idx is -1, then stack is empty
     }
 
-    // top FUNCTION : it is to give the topmost element of the stack
+    // getTop FUNCTION : it is to give the topmost element of the stack
     int getTop()
     {
         if (this->top == -1)
@@ -79,7 +79,6 @@ public:
 int main()
 {
 
-    // Stack *st = new Stack(5);
     Stack st(5);
 
     st.push(1);
