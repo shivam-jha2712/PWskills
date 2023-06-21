@@ -12,19 +12,13 @@ Output: true
 
 using namespace std;
 
-bool isDistinct(vector<int> &v)
+bool isDistinct(vector<int> &nums)
 {
-    int n = v.size();
-
-    for (int i = 0; i < n - 1; i++)
+    sort(nums.begin(), nums.end());
+    for (int i = 0; i < int(nums.size()) - 1; i++)
     {
-        for (int j = i + 1; j < n; j++)
-        {
-            if (v[i] == v[j])
-            {
-                return true;
-            }
-        }
+        if (nums[i] == nums[i + 1])
+            return true;
     }
     return false;
 }

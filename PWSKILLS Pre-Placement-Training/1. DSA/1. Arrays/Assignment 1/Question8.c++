@@ -34,7 +34,7 @@ vector<int> findMissing(vector<int> &nums)
         }
         else if (freq[i] == 2)
         {
-            ans.push_back(i); // Repeated number
+            ans.insert(ans.begin(), i); // Repeated number inserted at the beginning
         }
 
         if (ans.size() == 2)
