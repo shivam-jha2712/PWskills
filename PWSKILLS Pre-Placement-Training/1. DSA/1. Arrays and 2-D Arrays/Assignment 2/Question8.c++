@@ -15,6 +15,7 @@ Output: 0
 Explanation: The score is max(nums) - min(nums) = 1 - 1 = 0.
 */
 
+#include<iostream>
 #include <vector>
 #include <algorithm>
 
