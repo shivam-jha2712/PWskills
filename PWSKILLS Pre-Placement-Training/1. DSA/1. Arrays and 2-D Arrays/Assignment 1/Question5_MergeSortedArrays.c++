@@ -14,25 +14,56 @@ The result of the merge is [1,2,2,3,5,6] with the underlined elements coming fro
 
 */
 
-#include <bits/stdc++.h> // HEADER FILE
+#include <iostream>
+#include <vector>
 
 using namespace std;
 
-int main() // MAIN DEFINATION
+void merge(vector<int> &nums1, int m, vector<int> &nums2, int n)
 {
-    ios_base::sync_with_stdio(false); // For fast I/O
-    cin.tie(0);
-    cout.tie(0);
+    int i = m - 1;     // Pointer for nums1
+    int j = n - 1;     // Pointer for nums2
+    int k = m + n - 1; // Pointer for merged array
 
-    int n;
-    cin >> n;
-
-    vector<int> v(n);
-
-    for (int i = 0; i < n; i++)
+    while (i >= 0 && j >= 0)
     {
-        cin >> v[i];
+        if (nums1[i] >= nums2[j])
+        {
+            nums1[k] = nums1[i];
+            i--;
+        }
+        else
+        {
+            nums1[k] = nums2[j];
+            j--;
+        }
+        k--;
     }
+
+    // If there are remaining elements in nums2
+    while (j >= 0)
+    {
+        nums1[k] = nums2[j];
+        j--;
+        k--;
+    }
+}
+
+int main()
+{
+    vector<int> nums1 = {1, 2, 3, 0, 0, 0};
+    int m = 3;
+    vector<int> nums2 = {2, 5, 6};
+    int n = 3;
+
+    merge(nums1, m, nums2, n);
+
+    cout << "Merged array: ";
+    for (int num : nums1)
+    {
+        cout << num << " ";
+    }
+    cout << endl;
 
     return 0;
 }
