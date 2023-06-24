@@ -30,6 +30,24 @@ stack<int> copyStack(stack<int> &input)
     return result;
 }
 
+// Recursive Function of copyStack
+void copyStack_recursive(stack<int> &st, stack<int> &result)
+{
+    // Base case
+    if (st.empty())
+    {
+        return;
+    }
+    // Self Work - 1
+    int curr = st.top();
+    st.pop();
+    // Assumption that it works fine with all the elements except the top
+    // And would be copied easily
+    copyStack_recursive(st, result);
+    //  Self Work - 2
+    result.push(curr);
+}
+
 int main()
 {
     stack<int> st;
@@ -40,7 +58,12 @@ int main()
     st.push(3);
     st.push(4);
 
-    stack<int> result = copyStack(st);
+    // Iterative Function call
+    // stack<int> result = copyStack(st);
+
+    // Recursive Function call
+    stack<int> result;
+    copyStack_recursive(st, result);
 
     while (!result.empty())
     {
