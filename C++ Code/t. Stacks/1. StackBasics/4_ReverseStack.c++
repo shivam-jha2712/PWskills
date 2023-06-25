@@ -4,7 +4,7 @@
 using namespace std;
 
 // Create a insertAtBottom Function
-stack<int> insertAtBottom(stack<int> &input, int data)
+void insertAtBottom(stack<int> &input, int data)
 {
 
     // Create a temporary stack
@@ -27,8 +27,6 @@ stack<int> insertAtBottom(stack<int> &input, int data)
         temp.pop();
         input.push(curr);
     }
-
-    return input;
 }
 
 void insertAtBottom_Recursive(stack<int> &input, int bottom)
@@ -49,6 +47,47 @@ void insertAtBottom_Recursive(stack<int> &input, int bottom)
     input.push(curr);
 }
 
+// Time Complexity - O(N);
+// Space Complexity - O(N);
+
+void reverse(stack<int> &st)
+{
+    stack<int> temp1, temp2;
+    while (!st.empty())
+    {
+        int curr = st.top();
+        st.pop();
+        temp1.push(curr);
+    }
+
+    while (!temp1.empty())
+    {
+        int curr = temp1.top();
+        temp1.pop();
+        temp2.push(curr);
+    }
+
+    while (!temp2.empty())
+    {
+        int curr = temp2.top();
+        temp2.pop();
+        st.push(curr);
+    }
+}
+
+// Time Complexity - O(N^2);
+// Space Complexity - O(N);
+
+void reverse_Recursive(stack<int> &input)
+{
+    if (input.empty())
+        return;
+    int curr = input.top();
+    input.pop();
+    reverse_Recursive(input);
+    insertAtBottom(input, curr);
+}
+
 int main()
 {
     stack<int> st;
@@ -59,18 +98,9 @@ int main()
     st.push(3);
     st.push(4);
 
-    int data = 10;
+    reverse(st);
+    // reverse_Recursive(st);
 
-    // stack<int> result = insertAtBottom(st, data);
-
-    // while (!result.empty())
-    // {
-    //     int curr = result.top();
-    //     result.pop();
-    //     cout << curr << endl;
-    // }
-
-    insertAtBottom_Recursive(st, data);
     while (!st.empty())
     {
         int curr = st.top();
