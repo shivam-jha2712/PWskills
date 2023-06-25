@@ -2,12 +2,26 @@
 
 using namespace std;
 
+const int MAX_CHAR = 256; // Max character length in ASCII
+
 int findUniques(string str)
 {
-    int result = 0;
-    for(auto : str){
-        
+    int n = str.size();
+
+    int freq[MAX_CHAR] = {0}; // mapping all of them to be 0s
+    for (char ch : str)
+    {
+        freq[ch]++;
     }
+
+    for(int i = 0; i < n; i++)
+    {
+        if(freq[str[i]] == 1)
+        {
+            return i;
+        }
+    }
+    return -1;
 }
 
 int main() // MAIN DEFINATION
@@ -24,9 +38,5 @@ int main() // MAIN DEFINATION
     return 0;
 }
 
-// vector<int> freq(26,0); // Solving it using a frequency vector
-// for(int i=0; i<26; i++)
-// {
-//     int index = str[i] - 'a'; // typecasting each alphabet in an integer index of frqeuncy vector
-//     freq[index++];
-// }
+
+
