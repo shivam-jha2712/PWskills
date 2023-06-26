@@ -31,7 +31,7 @@ vector<int> previousGreaterElement(vector<int> &input)
             st.pop();
         }
 
-        st.push(i); // Push the current index to the stack
+        st.push(i); // Push the current index to the stack  
     }
 
     // Process the remaining elements in the stack
