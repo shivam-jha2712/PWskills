@@ -4,33 +4,34 @@ using namespace std;
 
 int calc(int v1, int v2, char op)
 {
-    if(op == '*')
+    if (op == '*')
     {
-        return v1*v2;
+        return v1 * v2;
     }
-    if(op == '+')
+    if (op == '+')
     {
-        return v1+v2;
+        return v1 + v2;
     }
-    if(op == '-')
+    if (op == '-')
     {
-        return v1-v2;
+        return v1 - v2;
     }
-    if(op == '/')
+    if (op == '/')
     {
-        return v1/v2;
+        return v1 / v2;
     }
     return 0;
 }
 
-int eval(string str) {
-    stack<int>st;
-    for(int i=0; i<str.length(); i++)
+int eval(string str)
+{
+    stack<int> st;
+    for (int i = 0; i < str.length(); i++)
     {
         char ch = str[i];
-        if(isdigit(ch))
+        if (isdigit(ch))
         {
-            st.push(ch- '0');
+            st.push(ch - '0');
         }
         else
         {
@@ -55,5 +56,7 @@ int main() // MAIN DEFINATION
 
     cout << eval(str);
 
-        return 0;
+    return 0;
 }
+
+// 231*+9- == -4
