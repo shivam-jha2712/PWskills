@@ -1,0 +1,48 @@
+body {
+    background-color: black;
+}
+
+.periodic-table {
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    gap: 5px;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    gap: 5px;
+}
+
+.element {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+table {
+    border-collapse: collapse;
+}
+td {
+    border: 1px solid black;
+    background-color: #fff;
+      padding: 5px;
+    }
+
+.s-block {
+    background-color: brown;
+}
+
+.p-block {
+    background-color: green;
+}
+
+.d-block {
+    background-color: yellow;
+}
+
+.f-block {
+    background-color: red;
+}
