@@ -1,0 +1,115 @@
+body {
+  max-width: 100%;
+  width: auto;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+
+.container {
+      display: flex;
+      justify-content: space-between;
+    }
+.card-container {
+      display: flex;
+      justify-content: space-between;
+    }
+
+.bluehead {
+      width: 200em;
+      height: 100px;
+      background-color: blue;
+      margin-top: 10px;
+      margin-right: 25px;
+      position: relative;
+    }
+
+ .greyhead {
+      width: 850em;
+      height: 100px;
+      background-color: grey;
+      margin-top: 10px;
+      position: relative;
+    }
+.centerBody{
+    width: 100vw;
+      height: 100px;
+      background-color: grey;
+      margin-top: 10px;
+      position: relative;
+}
+
+.bluecard {
+      width: 200em;
+      height: 300px;
+      background-color: blue;
+      padding: 20px;
+      margin: 11px;
+      box-sizing: border-box;
+      position: relative;
+    }
+.bluecard1 {
+      width: 200em;
+      height: 300px;
+      background-color: blue;
+      padding: 20px;
+      margin-top: 10px;
+      margin-right: 7px;
+      box-sizing: border-box;
+      position: relative;
+    }
+.bluecard3 {
+      width: 200em;
+      height: 300px;
+      background-color: blue;
+      padding: 20px;
+      margin-top: 10px;
+      margin-left: 7px;
+      box-sizing: border-box;
+      position: relative;
+    }
+
+ .footer{
+    width: 100vw;
+      height: 150px;
+      background-color: grey;
+      position: relative;
+}
+
+
+/* Media query for screens smaller than 600px (phones) */
+    @media screen and (max-width: 600px) {
+      .card-container {
+        display: flex;
+      justify-content: space-between;
+        flex-direction: column; /* Display cards in a single column */
+        align-items: center; /* Center align the cards vertically */
+      }
+      
+      .bluecard {
+      width: 90vw;
+      height: 100px;
+      background-color: blue;
+      margin-top: 10px;
+      position: relative;
+    }
+      .bluecard1 {
+     width: 90vw;
+      height: 100px;
+      background-color: blue;
+      margin-top: 10px;
+      margin-left: 10px;
+      position: relative;
+    }
+      .bluecard3 {
+     width: 90vw;
+      height: 100px;
+      background-color: blue;
+      margin-top: 1px;
+      margin-left: -3px;
+      margin-bottom: 10px;
+      position: relative;
+    }
+      
+    }
