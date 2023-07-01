@@ -9,7 +9,8 @@ int main() // MAIN DEFINATION
     cin.tie(0);
     cout.tie(0);
 
-    map<string, int> phoneBook;
+    map<string, int> phoneBook; // gives default ordering
+    // map<string, int, greater<string>> phoneBook; //gives descending order
 
     phoneBook["Anurag"] = 12345;
     phoneBook["Hitesh"] = 67890;
