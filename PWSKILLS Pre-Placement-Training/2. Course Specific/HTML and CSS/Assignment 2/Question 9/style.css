@@ -1,48 +1,52 @@
 body {
-    background-color: black;
+    background-color: white;
 }
 
-.periodic-table {
+.container {
     display: grid;
-    grid-template-columns: repeat(18, 1fr);
+    grid-template-columns: repeat(18, 0fr);
     gap: 5px;
+    justify-content: center;
 }
-
-.row {
+.f-block {
     display: grid;
-    grid-template-columns: repeat(18, 1fr);
+    margin-top: 35px;
+    grid-template-columns: repeat(18, 0fr);
     gap: 5px;
+    justify-content: center;
 }
 
-.element {
-    background-color: #fff;
-    border: 1px solid #ccc;
-    padding: 10px;
-    text-align: center;
-    font-weight: bold;
+.box{
+    height: 75px;
+    width: 75px;
+    border: 2px solid black; 
+    /* background-color: cyan; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: bold;
 }
-
-table {
-    border-collapse: collapse;
+.ibox{
+    height: 75px;
+    width: 75px;
+    /* border: 2px solid black;  */
 }
-td {
-    border: 1px solid black;
-    background-color: #fff;
-      padding: 5px;
-    }
 
 .s-block {
-    background-color: brown;
+  background-color: rgb(205, 87, 87);
+
 }
 
 .p-block {
-    background-color: green;
+  background-color: rgb(224, 224, 93);
+
 }
 
 .d-block {
-    background-color: yellow;
+  background-color: rgb(56, 186, 229);
 }
 
 .f-block {
-    background-color: red;
+  background-color: rgb(99, 220, 99);
 }
