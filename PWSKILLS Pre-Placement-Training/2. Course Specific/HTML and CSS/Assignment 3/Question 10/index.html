@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Student Dashboard</title>
+    <style>
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 8px;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tbody {
+            overflow-y: auto;
+            max-height: 400px;
+        }
+
+        @media screen and (max-width: 768px) {
+            table {
+                width: 100%;
+            }
+
+            td,
+            th {
+                display: none;
+            }
+
+            tbody tr {
+                display: block;
+                margin-bottom: 20px;
+                border: 1px solid #ddd;
+                padding: 10px;
+            }
+
+            tbody td:first-child,
+            tbody th:first-child {
+                display: block;
+                text-align: left;
+                font-weight: bold;
+                margin-bottom: 5px;
+            }
+
+            tbody td:nth-child(2),
+            tbody th:nth-child(2) {
+                display: block;
+                text-align: left;
+            }
+
+            tbody td:nth-child(2)::before,
+            tbody th:nth-child(2)::before {
+                content: attr(data-label);
+                font-weight: bold;
+                display: block;
+                margin-bottom: 5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Student Dashboard</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-label="Name">Shivam Jha</td>
+                    <td data-label="Email">skj@gmail.com</td>
+                    <td data-label="Phone">+91123456789</td>
+                </tr>
+                <tr>
+                    <td data-label="Name">Shivam Jha</td>
+                    <td data-label="Email">skj@gmail.com</td>
+                    <td data-label="Phone">+91123456789</td>
+                </tr>
+                <tr>
+                    <td data-label="Name">Shivam Jha</td>
+                    <td data-label="Email">skj@gmail.com</td>
+                    <td data-label="Phone">+91123456789</td>
+                </tr>
+                <tr>
+                    <td data-label="Name">Shivam Jha</td>
+                    <td data-label="Email">skj@gmail.com</td>
+                    <td data-label="Phone">+91123456789</td>
+                </tr>
+                <tr>
+                    <td data-label="Name">Shivam Jha</td>
+                    <td data-label="Email">skj@gmail.com</td>
+                    <td data-label="Phone">+91123456789</td>
+                </tr>
+                <!-- Add more student rows as needed -->
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
