@@ -1,0 +1,23 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 10px;
+}
+
+.box {
+    width: 100%;
+}
+
+h2{
+    position: relative;
+    margin-left: 43%;
+    justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        margin-left: 25%;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
