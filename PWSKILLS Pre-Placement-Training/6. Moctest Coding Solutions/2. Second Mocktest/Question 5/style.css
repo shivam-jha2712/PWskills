@@ -21,7 +21,7 @@
   height: 200px;
   margin: 5px;
   border: 1px solid black;
-  background-color: blue;
+  /* background-color: blue; */
 }
 
 .box2 {
@@ -30,7 +30,7 @@
   border: 1px solid black;
   margin: 5px;
   margin-top: -270px;
-  background-color: blue;
+  /* background-color: blue; */
 }
 
 .box3 {
@@ -38,6 +38,6 @@
   height: 150px;
   margin: 5px;
   border: 1px solid black;
-  background-color: blue;
+  /* background-color: blue; */
 }
 
