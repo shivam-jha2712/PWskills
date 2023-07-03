@@ -1,0 +1,144 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-left: 50%;
+}
+
+.navigation ul {
+  list-style: none;
+  margin-left: -250%;
+}
+
+.navigation li {
+  display: inline-block;
+  margin-right: 25px;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: #333;
+}
+
+.navig ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+}
+
+.navig li {
+  margin-right: 10px;
+  margin-left: -25%;
+}
+
+.navig li:last-child {
+  margin-right: 0;
+  margin-left: 5%;
+}
+
+.navig a {
+  text-decoration: none;
+  color: #fff;
+  padding: 8px 16px;
+  border: 1px solid #fff;
+  border-radius: 25px;
+  background-color: #dfdf13;
+}
+
+.navig a:hover {
+  background-color: #23527c;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero-text {
+  text-align: left;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  margin-left: 155px;
+}
+
+.hero-title {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.hero-subtitle {
+  font-size: 18px;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+.hero-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
+  border-radius: 25px;
+  background-color: #dfdf13;
+}
+
+.footer {
+  text-align: center;
+  padding: 5px;
+  margin-top: -20px;
+  width: 100%;
+  border-top: 1px solid #ccc;
+  color: #fff;
+  background-color: #000;
+  font-size: 16px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.topper {
+  text-align: center;
+  padding: 5px;
+  margin-top: -20px;
+  width: 100%;
+  border-top: 1px solid #ccc;
+  color: #fff;
+  background-color: #000;
+  font-size: 16px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
