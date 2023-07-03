@@ -1,0 +1,90 @@
+        1. Static Position:
+        The static position is the default position of an element. Elements with static position are positioned according to the
+        normal flow of the document. No positioning properties (`top`, `bottom`, `left`, `right`) have any effect on static
+        elements. Here's an example:
+        
+        ```html
+        <style>
+            .box {
+                position: static;
+            }
+        </style>
+        
+        <div class="box">Static Position</div>
+        ```
+        
+        2. Fixed Position:
+        Elements with fixed position are positioned relative to the viewport and do not move when the page is scrolled. Fixed
+        elements are fixed in their position even if the page is scrolled. Here's an example:
+        
+        ```html
+        <style>
+            .box {
+                position: fixed;
+                top: 20px;
+                left: 20px;
+            }
+        </style>
+        
+        <div class="box">Fixed Position</div>
+        ```
+        
+        3. Sticky Position:
+        Sticky positioning is a mix between static and fixed positioning. A sticky element is positioned relative to its nearest
+        scrolling ancestor or the viewport, depending on whether the element is within a scrolling container. It remains in the
+        normal flow until the scroll position crosses a specified threshold. Here's an example:
+        
+        ```html
+        <style>
+            .box {
+                position: sticky;
+                top: 50px;
+            }
+        </style>
+        
+        <div class="scroll-container">
+            <div class="box">Sticky Position</div>
+            <!-- Content that triggers scrolling -->
+        </div>
+        ```
+        
+        4. Relative Position:
+        Elements with relative position are positioned relative to their normal position. It allows you to adjust the position
+        of an element relative to its original position. Here's an example:
+        
+        ```html
+        <style>
+            .box {
+                position: relative;
+                top: 20px;
+                left: 20px;
+            }
+        </style>
+        
+        <div class="box">Relative Position</div>
+        ```
+        
+        5. Absolute Position:
+        Elements with absolute position are positioned relative to their closest positioned ancestor (i.e., an ancestor with a
+        position other than static) or the containing block if no positioned ancestor exists. They are taken out of the normal
+        flow of the document. Here's an example:
+        
+        ```html
+        <style>
+            .parent {
+                position: relative;
+                width: 200px;
+                height: 200px;
+            }
+        
+            .box {
+                position: absolute;
+                top: 50px;
+                left: 50px;
+            }
+        </style>
+        
+        <div class="parent">
+            <div class="box">Absolute Position</div>
+        </div>
+        ```
