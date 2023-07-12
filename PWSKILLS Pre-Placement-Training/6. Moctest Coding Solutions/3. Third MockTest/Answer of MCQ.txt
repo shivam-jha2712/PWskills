@@ -1,0 +1,27 @@
+Here are the answers to your questions:
+
+1. `!=`
+2. A forEach statement is used specifically for iterating over arrays and applies a provided function to each element, while a for statement is a more generic loop that can be used with different data structures.
+3. It returns a reference to a variable in its parent scope.
+4. `target`
+5. `document.getNode()` is not a valid method. The correct method is `document.getElementById()`.
+6. All of the above (Pending, Fulfilled, Rejected).
+7. Promises can represent both successful and unsuccessful completion of an asynchronous operation.
+8. To indicate successful completion of an asynchronous operation and provide the result value.
+9. `then()`
+10. `catch()`
+11. All of the above (new Promise(), Promise.resolve(), Promise.reject()).
+12. Adds a callback to be executed when the promise is rejected.
+13. To add a callback that will be executed regardless of the promise chain's outcome.
+14. Executes multiple promises in parallel and returns an array of their results.
+15. Using Promise.all()
+16. The resolved promise is chained and its result is used.
+17. `undefined` and `ReferenceError`
+18. No, once resolved or rejected, a promise's state cannot be changed.
+19. Promises make asynchronous code easier to read and maintain.
+20. When working with asynchronous code and callbacks.
+21. Hello!
+22. The scope determined by the physical location of the code in the file.
+23. By providing a mechanism for creating private variables and functions.
+24. By keeping a reference to the variables in memory.
+25. False
