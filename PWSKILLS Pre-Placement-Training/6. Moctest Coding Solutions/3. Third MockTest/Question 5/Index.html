@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .error-message {
+            color: red;
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="myForm" onsubmit="validateForm(event)">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+        <span id="nameError" class="error-message"></span>
+
+        <br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+        <span id="emailError" class="error-message"></span>
+
+        <br>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" required>
+        <span id="phoneError" class="error-message"></span>
+
+        <br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" required>
+        <span id="passwordError" class="error-message"></span>
+
+        <br>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" min="1" max="150" required>
+        <span id="ageError" class="error-message"></span>
+
+        <br>
+
+        <label for="gender">Gender:</label>
+        <select id="gender" required>
+            <option value="">-- Select Gender --</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select>
+        <span id="genderError" class="error-message"></span>
+
+        <br>
+
+        <label for="date">Date:</label>
+        <input type="date" id="date" required>
+        <span id="dateError" class="error-message"></span>
+
+        <br>
+
+        <label for="color">Favorite Color:</label>
+        <input type="color" id="color" required>
+        <span id="colorError" class="error-message"></span>
+
+        <br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        function validateForm(event) {
+            event.preventDefault();
+
+            // Clear all error messages
+            clearErrorMessages();
+
+            var name = document.getElementById('name').value.trim();
+            var email = document.getElementById('email').value.trim();
+            var phone = document.getElementById('phone').value.trim();
+            var password = document.getElementById('password').value.trim();
+            var age = document.getElementById('age').value;
+            var gender = document.getElementById('gender').value;
+            var date = document.getElementById('date').value;
+            var color = document.getElementById('color').value;
+
+            var isValid = true;
+
+            // Name validation (should not be empty)
+            if (name === '') {
+                showError('nameError', 'Name is required');
+                isValid = false;
+            }
+
+            // Email validation (should be a valid email format)
+            if (!isValidEmail(email)) {
+                showError('emailError', 'Invalid email address');
+                isValid = false;
+            }
+
+            // Phone number validation (should be a valid phone number format)
+            if (!isValidPhoneNumber(phone)) {
+                showError('phoneError', 'Invalid phone number');
+                isValid = false;
+            }
+
+            // Password validation (should be at least 6 characters long)
+            if (password.length < 6) {
+                showError('passwordError', 'Password should be at least 6 characters long');
+                isValid = false;
+            }
+
+            // Age validation (should be between 1 and 150)
+            if (age < 1 || age > 150) {
+                showError('ageError', 'Age should be between 1 and 150');
+                isValid = false;
+            }
+
+            // Gender validation (should be selected)
+            if (gender === '') {
+                showError('genderError', 'Gender is required');
+                isValid = false;
+            }
+
+            // Date validation (should be a valid date)
+            if (!isValidDate(date)) {
+                showError('dateError', 'Invalid date');
+                isValid = false;
+            }
+
+            // Color validation (should be selected)
+            if (color === '') {
+                showError('colorError', 'Color is required');
+                isValid = false;
+            }
+
+            if (isValid) {
+                // Submit the form or perform further actions
+                document.getElementById('myForm').submit();
+            }
+        }
+
+        function showError(id, message) {
+            var errorElement = document.getElementById(id);
+            errorElement.textContent = message;
+        }
+
+        function clearErrorMessages() {
+            var errorMessages = document.getElementsByClassName('error-message');
+            for (var i = 0; i < errorMessages.length; i++) {
+                errorMessages[i].textContent = '';
+            }
+        }
+
+        function isValidEmail(email) {
+            // Basic email format validation
+            var emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            return emailRegex.test(email);
+        }
+
+        function isValidPhoneNumber(phone) {
+            // Basic phone number format validation
+            var phoneRegex = /^\d{10}$/;
+            return phoneRegex.test(phone);
+        }
+
+        function isValidDate(date) {
+            // Basic date format validation
+            var dateRegex = /^\d{4}-\d{2}-\d{2}$/;
+            return dateRegex.test(date);
+        }
+    </script>
+</body>
+
+</html>
