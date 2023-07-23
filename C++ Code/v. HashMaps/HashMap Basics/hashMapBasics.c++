@@ -25,5 +25,13 @@ int main() // MAIN DEFINATION
         cout << endl;
     }
 
+    // Iterate this using begin and end iterators
+    for(auto itr = phoneBook.begin(); itr != phoneBook.end(); ++itr)
+    {
+        cout << "Name -" << itr->first << endl;
+        cout << "Phone -" << itr->second << endl;
+        cout << endl;
+    }
+
     return 0;
 }
