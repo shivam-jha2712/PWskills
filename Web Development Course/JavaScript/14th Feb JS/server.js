@@ -38,7 +38,7 @@ else {
 // Task 3 : Switch Case (used as alternative of if-else)
 console.log("// Switch case Conditions: ");
 
-let user = "Jd";
+let user = "Shivam";
 
 switch (user) {
     case "Admin":
@@ -47,8 +47,8 @@ switch (user) {
     case "Student":
         console.log("Hi! I am Student");
         break;
-    case "Mentor":
-        console.log("Hi! I am Mentor");
+    case "Shivam":
+        console.log("Hello Master!! How is your day?");
         break;
     default:
         console.log("Hi! I am default");

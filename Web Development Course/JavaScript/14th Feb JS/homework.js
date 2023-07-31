@@ -12,8 +12,8 @@ console.log(b == c);
 
 // Question 2 : 
 let greeting;
-greetign = {};
-console.log(greetign);
+greeting = {};
+console.log(greeting);
 
 // {}
 
