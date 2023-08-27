@@ -6,7 +6,7 @@ using namespace std;
 
 int main()
 {
-    string sentence = "This is a sample sentence.";
+    string sentence = "This is a sentence  sample    ";
     vector<string> wordArray;
 
     // Temporary variables to hold each word
@@ -36,6 +36,8 @@ int main()
     }
 
     cout << "Number of words: " << wordArray.size() << endl;
+    int n = wordArray.size();
+    cout << "Length of last word: " << wordArray[n-1].length() << endl;
 
     cout << "Words in the array:" << endl;
     for (const string &w : wordArray)
