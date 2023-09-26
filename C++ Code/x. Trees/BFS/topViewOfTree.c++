@@ -37,10 +37,17 @@ vector<int> topViewOfTree(Node *root)
 
     while (!q.empty())
     {
-        pair<Node *, int> currentNode = q.front();
-        Node *node = currentNode.first;
-        int columnNumber = currentNode.second;
-        q.pop();
+        pair<Node *, int> currentNode = q.front(); // Get the front element of the queue, which is a pair of node and column number.
+        Node *node = currentNode.first;            // Extract the node from the pair.
+        int columnNumber = currentNode.second;     // Extract the column number from the pair.
+        q.pop();                                   // Remove the front element from the queue.
+
+        // Explanation:
+        // - The queue stores pairs where the first element of the pair is a tree node (currentNode.first),
+        //   and the second element is the column number (currentNode.second).
+        // - Here, we retrieve the front element of the queue, which contains both the node and its column number.
+        // - We extract the node and column number from the pair for further processing.
+        // - Finally, we remove the front element from the queue to process the next node in the BFS traversal.
 
         // If the column number is not in the map, add it to the map.
         if (columnNumberMap.find(columnNumber) == columnNumberMap.end())

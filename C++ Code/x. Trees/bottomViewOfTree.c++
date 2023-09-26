@@ -40,7 +40,8 @@ vector<int> bottomView(TreeNode *root)
         q.pop();
 
         // Update the map with the current node's value for the current column.
-        columnNumberMap[columnNumber] = node->val;
+        columnNumberMap[columnNumber] = node->val; 
+        //This is basically jo last me mila use daal do 
 
         // Enqueue left child with adjusted column number.
         if (node->left)
