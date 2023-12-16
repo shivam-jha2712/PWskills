@@ -1,0 +1,1 @@
+generate 40 test cases for this question and save the test cases in input.txt and there answeres in output.txt  ""
