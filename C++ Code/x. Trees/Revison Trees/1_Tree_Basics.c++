@@ -1,79 +1,32 @@
-#include <iostream>
-#include <vector>
-#include <string>
+#include <bits/stdc++.h> // HEADER FILE
 
 using namespace std;
 
-bool can_convert(const vector<string> &a, const vector<string> &b, int n, int m)
+class Node
 {
-    vector<vector<int>> diff(n, vector<int>(m));
+public:
+    int value;
+    Node *left;
+    Node *right;
 
-    for (int i = 0; i < n; ++i)
+    Node(int v)
     {
-        for (int j = 0; j < m; ++j)
-        {
-            diff[i][j] = (b[i][j] - a[i][j] + 3) % 3;
-        }
+        value = v;
+        left = right = NULL;
     }
+};
 
-    for (int i = 0; i < n - 1; ++i)
-    {
-        for (int j = 0; j < m - 1; ++j)
-        {
-            int change = diff[i][j];
-            if (change != 0)
-            {
-                diff[i][j] = (diff[i][j] - change + 3) % 3;
-                diff[i][j + 1] = (diff[i][j + 1] - change + 3) % 3;
-                diff[i + 1][j] = (diff[i + 1][j] - change + 3) % 3;
-                diff[i + 1][j + 1] = (diff[i + 1][j + 1] - change + 3) % 3;
-            }
-        }
-    }
-
-    for (int i = 0; i < n; ++i)
-    {
-        if (diff[i][m - 1] != 0)
-            return false;
-    }
-    for (int j = 0; j < m; ++j)
-    {
-        if (diff[n - 1][j] != 0)
-            return false;
-    }
-
-    return true;
-}
-
-int main()
+int main() // MAIN DEFINATION
 {
-    int t;
-    cin >> t;
+    ios_base::sync_with_stdio(false); // For fast I/O
+    cin.tie(0);
+    cout.tie(0);
 
-    while (t--)
-    {
-        int n, m;
-        cin >> n >> m;
+    Node *root = new Node(3);
+    root->left = new Node(2);
+    root->right = new Node(4);
 
-        vector<string> a(n), b(n);
-        for (int i = 0; i < n; ++i)
-        {
-            cin >> a[i];
-        }
-        for (int i = 0; i < n; ++i)
-        {
-            cin >> b[i];
-        }
-
-        if (can_convert(a, b, n, m))
-        {
-            cout << "YES\n";
-        }
-        else
-        {
-            cout << "NO\n";
-        }
-    }
+    cout << root->left->value << root->value << root->right->value << endl;
 
     return 0;
 }
